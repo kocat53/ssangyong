@@ -6,6 +6,7 @@ var gulp = require('gulp'),
 	imagemin = require('gulp-imagemin'),
 	spritesmith = require('gulp.spritesmith'),
 	buffer = require('vinyl-buffer'),
+	php2html = require("gulp-php2html"),
 	autoprefixer = require('gulp-autoprefixer');
 
 //경로 설정 
@@ -105,10 +106,17 @@ function watchFiles() {
 	)
 }
 
+function php(done){
+	gulp.src("./src/*.php")
+		.pipe(php2html())
+		.pipe(gulp.dest("./dist"));
+	done();
+}
 // task 변수 지정
 const watch = gulp.parallel(watchFiles,broserLive);
 
 // task 용어 지정
+exports.php = php;
 exports.sprite = sprite;
 exports.img = image;
 exports.sass = scss;
