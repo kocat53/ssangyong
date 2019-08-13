@@ -28,6 +28,7 @@ var getFolders = function(dir) {
 function broserLive(done) {
 	browsersync.init({
 		server: {
+			files: ['*.php , *.html'],
 			baseDir: "./src"
 		},
 	});
@@ -100,7 +101,8 @@ function watchFiles() {
 			"src/img/**/*.png",
 			"src/css/*.css",
 			"src/js/*.js",
-			"src/*.html",
+			"src/**/*.php",
+			"src/**/*.html",
 		],
 		browserSyncReload,
 	)
