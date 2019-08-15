@@ -1,2 +1,25 @@
+.content_inner {
+	width: 930px;
+	margin: 0 auto;
+}
 
+.header_inner {
+	position: relative;
+	width: 990px;
+	margin: 0 auto;
+}
+
+.logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.logo > a {
+	background-image: url(../img/sp_ico.png);
+	width: 149px;
+	height: 30px;
+	background-position: 0px 0px;
+	display: inline-block;
+}
 /*# sourceMappingURL=common.css.map */

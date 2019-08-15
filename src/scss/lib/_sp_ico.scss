@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+// how to use : Use following mixins.
+// variable : [X-axis] [Y-axis] [offset_x] [offset_y] [width] [height] [total_width] [total_height] [image_url] [image_name] [folder_name]
+$ico-ico_search: 0px 40px 0px -40px 12px 12px 149px 52px '../img/sp_ico.png' 'ico-ico_search' 'sp_ico';
+$ico-logo: 0px 0px 0px 0px 149px 30px 149px 52px '../img/sp_ico.png' 'ico-logo' 'sp_ico';
+
+//ancestor
+$sp_ico-width: 149px;
+$sp_ico-height: 52px;
+$sp_ico-image: '../img/sp_ico.png';
+$sp_ico-sprites: ($ico-ico_search, $ico-logo, );
+$sp_ico_sprites_name: (ico-ico_search, ico-logo, );
+$sp_ico: (149px, 52px, '../img/sp_ico.png', $sp_ico-sprites, );
+
+//mixin
+@mixin sp_ico_background_img {
+	background-image: url(../img/sp_ico.png);
+}
+
+@mixin sp_ico($sprite) {
+	@include sp_ico_background_img;
+	@include spriteSizeSupport1x($sprite);
+	@include spriteBackgroundPositionSupport1x($sprite);
+}
+
+@mixin sp_ico_size($sprite) {
+	@include spriteSizeSupport1x($sprite);
+	@include spriteBackgroundPositionSupport1x($sprite);
+}
+
+@mixin sp_ico_on($sprite) {
+	@include sp_ico_background_img;
+	@include spriteBackgroundPositionSupport1x($sprite);
+}

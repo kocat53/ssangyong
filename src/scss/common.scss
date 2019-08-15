@@ -3,3 +3,9 @@
 @import 'mixin/_mixin';
 @import 'mixin/_var';
 @import 'lib/_sprite_mixins';
+
+// 스프라이트
+@import 'lib/_sp_ico';
+
+// 컨텐츠
+@import 'common/_common','common/_header';

@@ -8,7 +8,5 @@
 </head>
 <body>
 	<?php include 'inc/header.php'?>
-	<p>머냐고</p>
-	<p>ㄴㅇㅇ?</p>
 </body>
 </html>
