@@ -12,12 +12,11 @@ input,
 select,
 button,
 textarea {
-	font-family: 'Nanum Gothic', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
 	font-size: 14px;
 	color: #444;
 	font-weight: 400;
 	line-height: 1.25;
-	letter-spacing: -.5px;
 }
 
 main, header, footer, aside, nav, article, address {
@@ -104,4 +103,8 @@ table {
 
 .pr {
 	position: relative;
+}
+
+.hide {
+	display: none !important;
 }

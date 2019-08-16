@@ -1,5 +1,7 @@
 @charset 'UTF-8';
 
+$headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
+
 .header_inner {
 	position: relative;
 	width: 990px;
@@ -9,12 +11,322 @@
 // 로고
 .logo {
 	position: absolute;
-	top: 0;
-	left: 0;
+	bottom: 8px;
+	left: 50%;
+	z-index: 2;
+	margin-left: -495px;
 
 	> a {
 		@include sp_ico($ico-logo);
 
 		display: inline-block;
 	}
+}
+
+// 헤더 상단
+.header_top {
+	background-color: $base_gray;
+}
+
+// 헤더상단 - 사용자 메뉴
+.list_user_menu {
+	padding: 5px 0;
+
+	> li {
+		float: left;
+
+		& + li {
+			margin-left: 13px;
+		}
+
+		> a {
+			display: block;
+			padding: 3px 2px;
+			font : { 
+				size: 11px;
+				weight: 700;
+			}
+			color: #555;
+
+			&:hover,
+			&:focus {
+				color: #111;
+				text-decoration: underline;
+			}
+		}
+
+		&:not(.search_header) {
+			margin-top: 1px;
+		}
+	}
+
+	// 검색
+	.search_header {
+		position: relative;
+		padding: {
+			right : 20px;
+		};
+		background-color: #fff;
+		border: 1px solid #c0c0c0;
+		width: 110px;
+		box-sizing: border-box;
+
+		&.on {
+			border-color: #545454;
+		}
+
+		input {
+			width: 100%;
+			padding: 1px;
+			outline: none;
+		}
+
+		.btn_search {
+			position: absolute;
+			top: 3px;
+			right: 6px;
+			width: 10px;
+			height: 10px;
+			background-color: #fff;
+			border: 2px solid #767676;
+			border-radius: 100%;
+			outline: none;
+
+			// 돋보기 그리기
+			&:before {
+				position: absolute;
+				right: -50%;
+				bottom: -70%;
+				width:6px;
+				height: 2px;
+				background-color: #767676;
+				transform: rotate(45deg);
+				transform-origin: right bottom;
+				content: '';
+			}
+		}
+	}
+}
+
+//  헤더 하단
+.header_bottom {
+	position: relative;
+	background-color: #fff;
+	box-shadow: $headerShadow;
+
+	>.header_inner {
+		z-index: 22;
+		padding-left: 180px;
+		box-sizing: border-box;
+	}
+}
+
+// 주메뉴 공통 영역
+.menu_gnb {
+	float: left;
+
+	> li {
+		float: left;
+
+		&.on {
+			> a {
+				> span {
+					&:after {
+						display: block;
+					}
+				}
+			}
+		}
+		
+		> a {
+			display: block;
+
+			> span {
+				display: block;
+				position: relative;
+				font-weight: 500;
+
+				&:after {
+					display: none;
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					left: 0;
+					height: 4px;
+					content: '';
+				}
+			}
+		}
+	}
+}
+
+// 주메뉴
+#gnb {
+	&:before {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background-color: $base_gray;
+		content: '';
+	}
+
+	> li {
+
+		&.on {
+			.gnb_depth1 {
+				display: block;
+
+				&:before {
+					display: block;
+				}
+			}
+
+			> a {
+				> span {
+					color: $softblue;
+				}
+			}
+		}
+
+		> a {
+			padding: 0 24px;
+
+			> span {
+				padding: 20px 2px;
+				font-size: 16px;
+				color: #000;
+
+				&:after {
+					background-color: $softblue;
+				}
+			}
+		}
+	}
+
+	+ .page_menu {
+		position: relative;
+		margin-left: 46px;
+		padding-left: 33px;
+
+		&:before {
+			position: absolute;
+			top: 53%;
+			left: 0;
+			margin-top: -8px;
+			width: 1px;
+			height: 16px;
+			background-color: #a3a3a3;
+			content: '';
+		}
+	}
+}
+
+// 뎁스1
+.gnb_depth1 {
+	display: none;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	left: 0;
+	z-index: 10;
+
+	&:before {
+		display: none;
+		position: absolute;
+		top: -4px;
+		right: -999%;
+		left: -999%;
+		z-index: 10;
+		height: 4px;
+		box-shadow: $headerShadow;
+		content: '';
+	}
+
+	// 차량정보
+	&.type_car {
+		height: 130px;
+
+		.gnb_car_area {
+			display: block;
+			padding: 20px 15px;
+			text-align: center;
+		}
+
+		.name_car {
+			margin-top: 15px;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+	}
+
+	> li {
+		position: relative;
+		float: left;
+
+		&:hover,
+		&:focus {
+			background-color: #fff;
+		}
+
+		+ li {
+			&:before {
+				position: absolute;
+				top: 15px;
+				left: 0;
+				bottom: 15px;
+				width: 1px;
+				background-color: #ddd;
+				content: '';
+			}
+		}
+
+		> a {
+			color: #111;
+		}
+	}
+}
+
+// 회사소개 , IR 메뉴 등
+.page_menu {
+	> li {
+		> a {
+			padding: 0 14px;
+
+			> span {
+				padding: 22px 2px 21px;
+				font-size: 14px;
+				color: #444;
+
+				&:after {
+					background-color: #888;
+				}
+			}
+		}
+	}
+}
+
+// 전체메뉴 보기
+.gnb_menu_all {
+	position: absolute;
+	top: 16px;
+	right: 0;
+	padding: 7px 12px;
+	background-color: $softblue;
+	font-size: 13px;
+	color: #fff;
+}
+
+.gnb_depth2 {
+	display: none;
+}
+
+.gnb_bg {
+	display: none;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	left: 0;
+	background-color: $base_gray;
+	content: '';
 }
