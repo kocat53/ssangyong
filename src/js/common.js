@@ -26,7 +26,7 @@ function gnb() {
 			});
 		});
 
-		$this.on('mouseleave focusout', function () {
+		$this.on('mouseleave', function () {
 			$this.removeClass('on');			
 			$('.gnb_bg').removeAttr('style');
 		});

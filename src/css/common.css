@@ -121,6 +121,22 @@
 	float: left;
 }
 
+.menu_gnb > li:before {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	right: -999%;
+	left: -999%;
+	z-index: 10;
+	height: 4px;
+	box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
+	content: '';
+}
+
+.menu_gnb > li.on:before {
+	display: block;
+}
+
 .menu_gnb > li.on > a > span:after {
 	display: block;
 }
@@ -156,6 +172,10 @@
 
 #gnb > li.on .gnb_depth1 {
 	display: block;
+}
+
+#gnb > li.on .gnb_depth1.type_car {
+	display: table;
 }
 
 #gnb > li.on .gnb_depth1:before {
@@ -203,23 +223,19 @@
 	top: 100%;
 	right: 0;
 	left: 0;
-	z-index: 10;
-}
-
-.gnb_depth1:before {
-	display: none;
-	position: absolute;
-	top: -4px;
-	right: -999%;
-	left: -999%;
-	z-index: 10;
-	height: 4px;
-	box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
-	content: '';
 }
 
 .gnb_depth1.type_car {
+	width: 100%;
+	table-layout: fixed;
 	height: 130px;
+	box-sizing: border-box;
+}
+
+.gnb_depth1.type_car > li {
+	display: table-cell;
+	vertical-align: middle;
+	float: none;
 }
 
 .gnb_depth1.type_car .gnb_car_area {
@@ -255,6 +271,10 @@
 
 .gnb_depth1 > li > a {
 	color: #111;
+}
+
+.gnb_depth1 > li > a:hover, .gnb_depth1 > li > a:focus {
+	color: #4a63c6;
 }
 
 .page_menu > li > a {

@@ -128,7 +128,23 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 	> li {
 		float: left;
 
+		&:before {
+			display: none;
+			position: absolute;
+			bottom: 0;
+			right: -999%;
+			left: -999%;
+			z-index: 10;
+			height: 4px;
+			box-shadow: $headerShadow;
+			content: '';
+		}
+
 		&.on {
+			&:before {
+				display: block;
+			}
+			
 			> a {
 				> span {
 					&:after {
@@ -176,6 +192,10 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 		&.on {
 			.gnb_depth1 {
 				display: block;
+
+				&.type_car {
+					display: table;
+				}
 
 				&:before {
 					display: block;
@@ -229,23 +249,19 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 	top: 100%;
 	right: 0;
 	left: 0;
-	z-index: 10;
-
-	&:before {
-		display: none;
-		position: absolute;
-		top: -4px;
-		right: -999%;
-		left: -999%;
-		z-index: 10;
-		height: 4px;
-		box-shadow: $headerShadow;
-		content: '';
-	}
 
 	// 차량정보
 	&.type_car {
+		width: 100%;
+		table-layout: fixed;
 		height: 130px;
+		box-sizing: border-box;
+
+		> li {
+			display: table-cell;
+			vertical-align: middle;
+			float: none;
+		}
 
 		.gnb_car_area {
 			display: block;
@@ -283,6 +299,11 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 
 		> a {
 			color: #111;
+
+			&:hover,
+			&:focus {
+				color: $softblue;
+			}
 		}
 	}
 }
