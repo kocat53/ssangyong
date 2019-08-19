@@ -2,6 +2,26 @@
 
 $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 
+#header {
+	position: relative;
+	z-index: 20;
+}
+
+.gnb_dimmed {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.6);
+
+	&.on {
+		display: block;
+	}
+}
+
 .header_inner {
 	position: relative;
 	width: 990px;
@@ -13,7 +33,7 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 	position: absolute;
 	bottom: 8px;
 	left: 50%;
-	z-index: 2;
+	z-index: 50;
 	margin-left: -495px;
 
 	> a {
@@ -116,7 +136,7 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 
 	>.header_inner {
 		z-index: 22;
-		padding-left: 180px;
+		padding-left: 184px;
 		box-sizing: border-box;
 	}
 }
@@ -144,14 +164,6 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 			&:before {
 				display: block;
 			}
-			
-			> a {
-				> span {
-					&:after {
-						display: block;
-					}
-				}
-			}
 		}
 		
 		> a {
@@ -170,6 +182,15 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 					left: 0;
 					height: 4px;
 					content: '';
+				}
+			}
+
+			&:hover,
+			&:focus {
+				> span {
+					&:after {
+						display: block;
+					}
 				}
 			}
 		}
@@ -226,7 +247,7 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 
 	+ .page_menu {
 		position: relative;
-		margin-left: 46px;
+		margin-left: 37px;
 		padding-left: 33px;
 
 		&:before {
@@ -254,18 +275,18 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 	&.type_car {
 		width: 100%;
 		table-layout: fixed;
-		height: 130px;
 		box-sizing: border-box;
 
 		> li {
-			display: table-cell;
-			vertical-align: middle;
 			float: none;
+			display: table-cell;
+			padding: 0;
+			vertical-align: middle;
 		}
 
 		.gnb_car_area {
 			display: block;
-			padding: 20px 15px;
+			padding: 25px 10px 15px;
 			text-align: center;
 		}
 
@@ -279,10 +300,16 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 	> li {
 		position: relative;
 		float: left;
+		padding: 17px 17px 35px;
+		box-sizing: border-box;
 
 		&:hover,
 		&:focus {
 			background-color: #fff;
+
+			.name_gnb_depth1 {
+				color: $softblue;
+			}
 		}
 
 		+ li {
@@ -303,6 +330,34 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 			&:hover,
 			&:focus {
 				color: $softblue;
+			}
+		}
+	}
+
+	// 뎁스 타이틀
+	.name_gnb_depth1 {
+		font-size: 14px;
+		font-weight: 700;
+		color: #000;
+	}
+}
+
+.gnb_depth2 {
+	margin-top: 12px;
+	
+	> li {
+		+ li {
+			margin-top: 9px;
+		}
+
+		> a {
+			font-size: 13px;
+			color: #000;
+			
+			&:hover,
+			&:focus {
+				color: $softblue;
+				border-bottom: 2px solid #ff5a10;
 			}
 		}
 	}
@@ -336,10 +391,6 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 	background-color: $softblue;
 	font-size: 13px;
 	color: #fff;
-}
-
-.gnb_depth2 {
-	display: none;
 }
 
 .gnb_bg {

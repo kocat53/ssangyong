@@ -3,6 +3,26 @@
 	margin: 0 auto;
 }
 
+#header {
+	position: relative;
+	z-index: 20;
+}
+
+.gnb_dimmed {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.gnb_dimmed.on {
+	display: block;
+}
+
 .header_inner {
 	position: relative;
 	width: 990px;
@@ -13,7 +33,7 @@
 	position: absolute;
 	bottom: 8px;
 	left: 50%;
-	z-index: 2;
+	z-index: 50;
 	margin-left: -495px;
 }
 
@@ -109,7 +129,7 @@
 
 .header_bottom > .header_inner {
 	z-index: 22;
-	padding-left: 180px;
+	padding-left: 184px;
 	box-sizing: border-box;
 }
 
@@ -137,10 +157,6 @@
 	display: block;
 }
 
-.menu_gnb > li.on > a > span:after {
-	display: block;
-}
-
 .menu_gnb > li > a {
 	display: block;
 }
@@ -159,6 +175,10 @@
 	left: 0;
 	height: 4px;
 	content: '';
+}
+
+.menu_gnb > li > a:hover > span:after, .menu_gnb > li > a:focus > span:after {
+	display: block;
 }
 
 #gnb:before {
@@ -202,7 +222,7 @@
 
 #gnb + .page_menu {
 	position: relative;
-	margin-left: 46px;
+	margin-left: 37px;
 	padding-left: 33px;
 }
 
@@ -228,19 +248,19 @@
 .gnb_depth1.type_car {
 	width: 100%;
 	table-layout: fixed;
-	height: 130px;
 	box-sizing: border-box;
 }
 
 .gnb_depth1.type_car > li {
-	display: table-cell;
-	vertical-align: middle;
 	float: none;
+	display: table-cell;
+	padding: 0;
+	vertical-align: middle;
 }
 
 .gnb_depth1.type_car .gnb_car_area {
 	display: block;
-	padding: 20px 15px;
+	padding: 25px 10px 15px;
 	text-align: center;
 }
 
@@ -253,10 +273,16 @@
 .gnb_depth1 > li {
 	position: relative;
 	float: left;
+	padding: 17px 17px 35px;
+	box-sizing: border-box;
 }
 
 .gnb_depth1 > li:hover, .gnb_depth1 > li:focus {
 	background-color: #fff;
+}
+
+.gnb_depth1 > li:hover .name_gnb_depth1, .gnb_depth1 > li:focus .name_gnb_depth1 {
+	color: #4a63c6;
 }
 
 .gnb_depth1 > li + li:before {
@@ -275,6 +301,30 @@
 
 .gnb_depth1 > li > a:hover, .gnb_depth1 > li > a:focus {
 	color: #4a63c6;
+}
+
+.gnb_depth1 .name_gnb_depth1 {
+	font-size: 14px;
+	font-weight: 700;
+	color: #000;
+}
+
+.gnb_depth2 {
+	margin-top: 12px;
+}
+
+.gnb_depth2 > li + li {
+	margin-top: 9px;
+}
+
+.gnb_depth2 > li > a {
+	font-size: 13px;
+	color: #000;
+}
+
+.gnb_depth2 > li > a:hover, .gnb_depth2 > li > a:focus {
+	color: #4a63c6;
+	border-bottom: 2px solid #ff5a10;
 }
 
 .page_menu > li > a {
@@ -299,10 +349,6 @@
 	background-color: #4a63c6;
 	font-size: 13px;
 	color: #fff;
-}
-
-.gnb_depth2 {
-	display: none;
 }
 
 .gnb_bg {
