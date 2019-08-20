@@ -1,0 +1,207 @@
+@charset 'UTF-8';
+/* 회사소개 */
+
+// 회사소개 페이지 공통 타이틀
+.title_company {
+	color: $navy;
+	font: {
+		size: 20px;
+		weight: 700;
+	}
+
+	&.sm {
+		font-size: 17px;
+	}
+}
+
+//특징
+.company_feature {
+	overflow: hidden;
+	
+	.item_feature {
+		float: left;
+		width: 290px;
+		border: 1px solid #c8cfd9;
+		box-sizing: border-box;
+
+		& + .item_feature {
+			margin-left: 30px;
+		}
+	}
+
+	// 대표 특징
+	.main_feature {
+		position: relative;
+		height: 236px;
+		padding: 18px 19px;
+		box-sizing: border-box;
+
+		&:before {
+			@include sp_company_background_img;
+
+			position: absolute;
+			background-repeat: no-repeat;
+			content: ' ';
+		}
+
+		&.feat_story {
+			&:before {
+				@include sp_company_size($company-book);
+
+				bottom: 21px;
+				left: 45px;
+			}
+		}
+
+		&.feat_us {
+			&:before {
+				@include sp_company_size($company-bridge);
+
+				bottom: 12px;
+				left: 26px;
+			}
+		}
+
+		&.feat_value {
+			&:before {
+				@include sp_company_size($company-car_city);
+
+				bottom: 17px;
+				left: 42px;
+			}
+		}
+	}
+
+	.menu_feat {
+		position: relative;
+		display: block;
+		padding: 13px 19px 14px;
+		background-color: #fafafa;
+		border-top: 1px solid #c8cfd9;
+
+		&:before {
+			@include sp_common($common-arw_right_9x17);
+
+			position: absolute;
+			top:15px;
+			right: 19px;
+			content: '';
+		}
+
+		&:hover,
+		&:focus {
+			background-color: $navy;
+			color: #fff;
+		}
+	}
+}
+
+// 특징 설명글
+.desc_feature {
+	margin-top: 7px;
+	font-size: 12px;
+	color: #777;
+}
+
+// 회사 정보
+.company_info {
+	margin-top: 30px;
+}
+
+.list_company_info {
+	overflow: hidden;
+
+	.info_wrap {
+		float: left;
+		width: 290px;
+		box-sizing: border-box;
+		border-top: 2px solid $navy;
+
+		&.info_slider {
+			height: 305px;
+			padding: 20px;
+			border-bottom: 1px solid #c8cfd9;
+		}
+
+		& + .info_wrap {
+			margin-left: 30px;
+		}
+
+		> a {
+			position: relative;
+			display: block;
+			height: 150px;
+			padding: 16px 20px;
+			box-sizing: border-box;
+
+			.title_company {
+				color: #333;
+			}
+
+			&:hover,
+			&:focus {
+				background-color: $navy;
+
+				.title_company {
+					color: #fff;
+				}
+
+				.desc_feature {
+					color: #8598b2;
+				}
+			}
+
+			&:before {
+				@include sp_company_background_img;
+
+				position: absolute;
+				background-repeat: no-repeat;
+				content: '';
+			}
+
+			// CI
+			&.info_bg_logo {
+				&:before {
+					@include sp_company_size($company-logo);
+
+					right: 20px;
+					bottom: 43px;
+				}
+			}
+
+			// 사회공헌
+			&.info_bg_ballon {
+				&:before {
+					@include sp_company_size($company-fire_balloon);
+
+					top: 8px;
+					right: 13px;
+				}
+			}
+
+			// 브로슈어
+			&.info_bg_magazin {
+				border-bottom: 1px solid #c8cfd9;
+
+				&:before {
+					@include sp_company_size($company-magazin);
+					
+					right: 5px;
+					bottom: 8px;
+				}
+			}
+			
+			// 미한드라
+			&.info_bg_mihan {
+				border-bottom: 1px solid #c8cfd9;
+
+				&:before {
+					@include sp_company_size($company-mahindra);
+
+					right: 18px;
+					bottom: 32px;
+				}
+			}
+		}
+	}
+}

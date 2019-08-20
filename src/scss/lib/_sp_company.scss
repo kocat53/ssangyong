@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+// how to use : Use following mixins.
+// variable : [X-axis] [Y-axis] [offset_x] [offset_y] [width] [height] [total_width] [total_height] [image_url] [image_name] [folder_name]
+$company-book: 0px 145px 0px -145px 194px 131px 448px 413px '../img/sp_company.png' 'company-book' 'sp_company';
+$company-bridge: 0px 0px 0px 0px 218px 135px 448px 413px '../img/sp_company.png' 'company-bridge' 'sp_company';
+$company-car_city: 228px 0px -228px 0px 220px 123px 448px 413px '../img/sp_company.png' 'company-car_city' 'sp_company';
+$company-fire_balloon: 0px 286px 0px -286px 74px 127px 448px 413px '../img/sp_company.png' 'company-fire_balloon' 'sp_company';
+$company-logo: 352px 145px -352px -145px 92px 72px 448px 413px '../img/sp_company.png' 'company-logo' 'sp_company';
+$company-magazin: 204px 145px -204px -145px 138px 104px 448px 413px '../img/sp_company.png' 'company-magazin' 'sp_company';
+$company-mahindra: 84px 286px -84px -286px 136px 36px 448px 413px '../img/sp_company.png' 'company-mahindra' 'sp_company';
+
+//ancestor
+$sp_company-width: 448px;
+$sp_company-height: 413px;
+$sp_company-image: '../img/sp_company.png';
+$sp_company-sprites: ($company-book, $company-bridge, $company-car_city, $company-fire_balloon, $company-logo, $company-magazin, $company-mahindra, );
+$sp_company_sprites_name: (company-book, company-bridge, company-car_city, company-fire_balloon, company-logo, company-magazin, company-mahindra, );
+$sp_company: (448px, 413px, '../img/sp_company.png', $sp_company-sprites, );
+
+//mixin
+@mixin sp_company_background_img {
+	background-image: url(../img/sp_company.png);
+}
+
+@mixin sp_company($sprite) {
+	@include sp_company_background_img;
+	@include spriteSizeSupport1x($sprite);
+	@include spriteBackgroundPositionSupport1x($sprite);
+}
+
+@mixin sp_company_size($sprite) {
+	@include spriteSizeSupport1x($sprite);
+	@include spriteBackgroundPositionSupport1x($sprite);
+}
+
+@mixin sp_company_on($sprite) {
+	@include sp_company_background_img;
+	@include spriteBackgroundPositionSupport1x($sprite);
+}
