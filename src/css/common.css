@@ -3,6 +3,33 @@
 	margin: 30px auto;
 }
 
+.swiper-slide {
+	display: block;
+}
+
+.btn_arrow {
+	position: absolute;
+	top: 50%;
+}
+
+.btn_arrow.arrow_prev {
+	left: -17px;
+	transform: rotateY(180deg);
+}
+
+.btn_arrow.arrow_next {
+	right: -10px;
+}
+
+.btn_arrow:before {
+	background-image: url(../img/sp_common.png);
+	width: 9px;
+	height: 17px;
+	background-position: -48px -48px;
+	display: inline-block;
+	content: '';
+}
+
 #header {
 	position: relative;
 	z-index: 20;

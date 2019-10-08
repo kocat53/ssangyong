@@ -109,6 +109,7 @@
 }
 
 .list_company_info .info_wrap.info_slider {
+	position: relative;
 	height: 305px;
 	padding: 20px;
 	border-bottom: 1px solid #c8cfd9;
@@ -187,5 +188,31 @@
 	background-position: -84px -286px;
 	right: 18px;
 	bottom: 32px;
+}
+
+.box_workspace {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(52, 71, 99, 0.8);
+	padding: 5px 10px;
+	font-size: 13px;
+	font-weight: 400;
+	color: #fff;
+}
+
+.workspace_dot {
+	text-align: center;
+	margin-top: 7px;
+}
+
+.workspace_dot .swiper-pagination-bullet {
+	background-color: #cecece;
+	opacity: 1;
+	margin: 0 4px;
+}
+
+.workspace_dot .swiper-pagination-bullet-active {
+	background-color: #344763;
 }
 /*# sourceMappingURL=contents.css.map */

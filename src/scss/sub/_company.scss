@@ -118,6 +118,7 @@
 		border-top: 2px solid $navy;
 
 		&.info_slider {
+			position: relative;
 			height: 305px;
 			padding: 20px;
 			border-bottom: 1px solid #c8cfd9;
@@ -203,5 +204,31 @@
 				}
 			}
 		}
+	}
+}
+// 사업장 슬라이더 이름 택
+.box_workspace {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: rgba($color: $navy, $alpha: 0.8);
+	padding: 5px 10px;
+	font-size: 13px;
+	font-weight: 400;
+	color: #fff;
+}
+
+.workspace_dot {
+	text-align: center;
+	margin-top: 7px;
+
+	.swiper-pagination-bullet {
+		background-color: #cecece;
+		opacity: 1;
+		margin: 0 4px;
+	}
+
+	.swiper-pagination-bullet-active {
+		background-color: $navy;
 	}
 }
