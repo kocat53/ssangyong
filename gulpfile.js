@@ -6,7 +6,11 @@ var gulp = require('gulp'),
 	imagemin = require('gulp-imagemin'),
 	spritesmith = require('gulp.spritesmith'),
 	buffer = require('vinyl-buffer'),
-	php2html = require("gulp-php2html"),
+	del = require('del'), // 삭제 용도
+	plumber = require('gulp-plumber'), // 오류나는 부분 알려줌
+	prettier = require('gulp-prettier'),
+	decomment = require('gulp-decomment')
+	pug = require('gulp-pug'),
 	autoprefixer = require('gulp-autoprefixer');
 
 //경로 설정 
@@ -28,8 +32,7 @@ var getFolders = function(dir) {
 function broserLive(done) {
 	browsersync.init({
 		server: {
-			files: ['*.php , *.html'],
-			baseDir: "./src"
+			baseDir: "./dist"
 		},
 	});
 	done();
@@ -38,6 +41,28 @@ function broserLive(done) {
 function browserSyncReload(done) {
 	browsersync.reload();
 	done();
+}
+
+// pug 를 html로 변환
+function com_pug(done) {
+	gulp.src('./src/**/*.pug')
+		.pipe(plumber())
+		.pipe(pug({
+			filename: 'include',
+		}))
+		.pipe(prettier({
+			tabWidth: 4,
+			parser: "html",
+			useTabs: true,
+			htmlWhitespaceSensitivity: "ignore",
+		}))
+		.pipe(gulp.dest('./dist'))
+	done();
+}
+
+// 폴더 지우기
+function delFolder(done) {
+	return del('dist/template')
 }
 
 // sass - css 컴파일
@@ -51,7 +76,7 @@ function scss(done) {
 		.pipe(autoprefixer({
 			cascade: false
 		}))
-		.pipe(gulp.dest('src/css',{ sourcemaps: './' }));
+		.pipe(gulp.dest('dist/css',{ sourcemaps: './' }));
 	done();
 }
 
@@ -74,8 +99,7 @@ function sprite(done) {
 
 		spriteData.img
 			.pipe(buffer())
-			// .pipe(tiny())
-			.pipe(gulp.dest(dir.source + dir.img));
+			.pipe(gulp.dest('dist/img'));
 		spriteData.css.pipe(gulp.dest(dir.source + dir.scss + dir.lib));
 	});
 	done();
@@ -85,11 +109,11 @@ function image(done) {
 	gulp.src(['src/img/*.png', '!src/img/sp_*.png'])
 		.pipe(imagemin({
 			optimizationLevel: 1,
-			quality: '50', // When used more then 70 the image wasn't saved
-			speed: 1, // The lowest speed of optimization with the highest quality
-			floyd: 1 // Controls level of dithering (0 = none, 1 = full).
+			quality: '50',
+			speed: 1,
+			floyd: 1
 		}))
-		.pipe(gulp.dest('src/img/dist'));
+		.pipe(gulp.dest('dist/img'));
 	done();
 }
 
@@ -98,27 +122,19 @@ function watchFiles() {
 	gulp.watch("src/scss/**/*", scss);
 	gulp.watch(
 		[
-			"src/img/**/*.png",
-			"src/css/*.css",
-			"src/js/*.js",
-			"src/**/*.php",
-			"src/**/*.html",
+			"dist/img/*",
+			"dist/css/*.css",
+			"dist/js/*.js",
+			"dist/*.html",
 		],
 		browserSyncReload,
 	)
 }
 
-function php(done){
-	gulp.src("./src/*.php")
-		.pipe(php2html())
-		.pipe(gulp.dest("./dist"));
-	done();
-}
 // task 변수 지정
 const watch = gulp.parallel(watchFiles,broserLive);
 
 // task 용어 지정
-exports.php = php;
 exports.sprite = sprite;
 exports.img = image;
 exports.sass = scss;
