@@ -270,6 +270,7 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 	top: 100%;
 	right: 0;
 	left: 0;
+	z-index: 10;
 
 	// 차량정보
 	&.type_car {

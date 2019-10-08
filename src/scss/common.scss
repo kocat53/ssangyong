@@ -8,5 +8,6 @@
 @import 'lib/_sp_ico';
 @import 'lib/sp_common';
 
-// 컨텐츠
-@import 'common/_common','common/_header';
+@import 'common/_reset';
+@import 'common/_common';
+@import 'common/_header';

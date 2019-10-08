@@ -6,10 +6,10 @@ var gulp = require('gulp'),
 	imagemin = require('gulp-imagemin'),
 	spritesmith = require('gulp.spritesmith'),
 	buffer = require('vinyl-buffer'),
+	decomment = require('gulp-decomment'),
 	del = require('del'), // 삭제 용도
 	plumber = require('gulp-plumber'), // 오류나는 부분 알려줌
 	prettier = require('gulp-prettier'),
-	decomment = require('gulp-decomment')
 	pug = require('gulp-pug'),
 	autoprefixer = require('gulp-autoprefixer');
 
@@ -105,11 +105,17 @@ function sprite(done) {
 	done();
 }
 
+function js(done) {
+	gulp.src('./src/js/*.js')
+		.pipe(gulp.dest('./dist/js'))
+	done();
+}
+
 function image(done) {
-	gulp.src(['src/img/*.png', '!src/img/sp_*.png'])
+	gulp.src(['src/img/*.png'])
 		.pipe(imagemin({
 			optimizationLevel: 1,
-			quality: '50',
+			quality: '75',
 			speed: 1,
 			floyd: 1
 		}))
@@ -120,6 +126,10 @@ function image(done) {
 // Watch files
 function watchFiles() {
 	gulp.watch("src/scss/**/*", scss);
+	gulp.watch('src/**/*.pug', com_pug);
+	gulp.watch("src/js/*.js", js);
+	gulp.watch("src/img/*", image);
+	gulp.watch('dist/template', delFolder);
 	gulp.watch(
 		[
 			"dist/img/*",
@@ -135,6 +145,7 @@ function watchFiles() {
 const watch = gulp.parallel(watchFiles,broserLive);
 
 // task 용어 지정
+exports.html = com_pug;
 exports.sprite = sprite;
 exports.img = image;
 exports.sass = scss;

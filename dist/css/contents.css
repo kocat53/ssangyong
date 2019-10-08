@@ -1,0 +1,218 @@
+@charset "UTF-8";
+/* 회사소개 */
+.title_company {
+	color: #344763;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.title_company.sm {
+	font-size: 17px;
+}
+
+.company_feature {
+	overflow: hidden;
+}
+
+.company_feature .item_feature {
+	float: left;
+	width: 290px;
+	border: 1px solid #c8cfd9;
+	box-sizing: border-box;
+}
+
+.company_feature .item_feature + .item_feature {
+	margin-left: 30px;
+}
+
+.company_feature .main_feature {
+	position: relative;
+	height: 236px;
+	padding: 18px 19px;
+	box-sizing: border-box;
+}
+
+.company_feature .main_feature:before {
+	background-image: url(../img/sp_company.png);
+	position: absolute;
+	background-repeat: no-repeat;
+	content: ' ';
+}
+
+.company_feature .main_feature.feat_story:before {
+	width: 194px;
+	height: 131px;
+	background-position: 0px -145px;
+	bottom: 21px;
+	left: 45px;
+}
+
+.company_feature .main_feature.feat_us:before {
+	width: 218px;
+	height: 135px;
+	background-position: 0px 0px;
+	bottom: 12px;
+	left: 26px;
+}
+
+.company_feature .main_feature.feat_value:before {
+	width: 220px;
+	height: 123px;
+	background-position: -228px 0px;
+	bottom: 17px;
+	left: 42px;
+}
+
+.company_feature .menu_feat {
+	position: relative;
+	display: block;
+	padding: 13px 19px 14px;
+	background-color: #fafafa;
+	border-top: 1px solid #c8cfd9;
+}
+
+.company_feature .menu_feat:before {
+	background-image: url(../img/sp_common.png);
+	width: 9px;
+	height: 17px;
+	background-position: -48px -48px;
+	position: absolute;
+	top: 15px;
+	right: 19px;
+	content: '';
+}
+
+.company_feature .menu_feat:hover, .company_feature .menu_feat:focus {
+	background-color: #344763;
+	color: #fff;
+}
+
+.desc_feature {
+	margin-top: 7px;
+	font-size: 12px;
+	color: #777;
+}
+
+.company_info {
+	margin-top: 30px;
+}
+
+.list_company_info {
+	overflow: hidden;
+}
+
+.list_company_info .info_wrap {
+	float: left;
+	width: 290px;
+	box-sizing: border-box;
+	border-top: 2px solid #344763;
+}
+
+.list_company_info .info_wrap.info_slider {
+	position: relative;
+	height: 305px;
+	padding: 20px;
+	border-bottom: 1px solid #c8cfd9;
+}
+
+.list_company_info .info_wrap + .info_wrap {
+	margin-left: 30px;
+}
+
+.list_company_info .info_wrap > a {
+	position: relative;
+	display: block;
+	height: 150px;
+	padding: 16px 20px;
+	box-sizing: border-box;
+}
+
+.list_company_info .info_wrap > a .title_company {
+	color: #333;
+}
+
+.list_company_info .info_wrap > a:hover, .list_company_info .info_wrap > a:focus {
+	background-color: #344763;
+}
+
+.list_company_info .info_wrap > a:hover .title_company, .list_company_info .info_wrap > a:focus .title_company {
+	color: #fff;
+}
+
+.list_company_info .info_wrap > a:hover .desc_feature, .list_company_info .info_wrap > a:focus .desc_feature {
+	color: #8598b2;
+}
+
+.list_company_info .info_wrap > a:before {
+	background-image: url(../img/sp_company.png);
+	position: absolute;
+	background-repeat: no-repeat;
+	content: '';
+}
+
+.list_company_info .info_wrap > a.info_bg_logo:before {
+	width: 92px;
+	height: 72px;
+	background-position: -352px -145px;
+	right: 20px;
+	bottom: 43px;
+}
+
+.list_company_info .info_wrap > a.info_bg_ballon:before {
+	width: 74px;
+	height: 127px;
+	background-position: 0px -286px;
+	top: 8px;
+	right: 13px;
+}
+
+.list_company_info .info_wrap > a.info_bg_magazin {
+	border-bottom: 1px solid #c8cfd9;
+}
+
+.list_company_info .info_wrap > a.info_bg_magazin:before {
+	width: 138px;
+	height: 104px;
+	background-position: -204px -145px;
+	right: 5px;
+	bottom: 8px;
+}
+
+.list_company_info .info_wrap > a.info_bg_mihan {
+	border-bottom: 1px solid #c8cfd9;
+}
+
+.list_company_info .info_wrap > a.info_bg_mihan:before {
+	width: 136px;
+	height: 36px;
+	background-position: -84px -286px;
+	right: 18px;
+	bottom: 32px;
+}
+
+.box_workspace {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(52, 71, 99, 0.8);
+	padding: 5px 10px;
+	font-size: 13px;
+	font-weight: 400;
+	color: #fff;
+}
+
+.workspace_dot {
+	text-align: center;
+	margin-top: 7px;
+}
+
+.workspace_dot .swiper-pagination-bullet {
+	background-color: #cecece;
+	opacity: 1;
+	margin: 0 4px;
+}
+
+.workspace_dot .swiper-pagination-bullet-active {
+	background-color: #344763;
+}
+/*# sourceMappingURL=contents.css.map */
