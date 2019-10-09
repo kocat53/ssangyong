@@ -1,0 +1,6 @@
+//-공통 타이틀 설정
+mixin title(title,desc,tag)
+   - tag = tag || 'strong'
+   #{tag}.common_title!=title
+   if desc
+      p.desc_feature!=desc

@@ -7,6 +7,8 @@
 // 스프라이트
 @import 'lib/sp_common';
 @import 'lib/sp_company';
+@import 'lib/sp_employ';
 
 // 회사소개
-@import 'sub/company'
+@import 'sub/_company';
+@import 'sub/_employ';

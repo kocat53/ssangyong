@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+// how to use : Use following mixins.
+// variable : [X-axis] [Y-axis] [offset_x] [offset_y] [width] [height] [total_width] [total_height] [image_url] [image_name] [folder_name]
+$employ-box: 307px 138px -307px -138px 121px 105px 496px 418px '../img/sp_employ.png' 'employ-box' 'sp_employ';
+$employ-building: 0px 313px 0px -313px 121px 105px 496px 418px '../img/sp_employ.png' 'employ-building' 'sp_employ';
+$employ-car: 131px 313px -131px -313px 121px 105px 496px 418px '../img/sp_employ.png' 'employ-car' 'sp_employ';
+$employ-puzzle: 0px 151px 0px -151px 192px 152px 496px 418px '../img/sp_employ.png' 'employ-puzzle' 'sp_employ';
+$employ-round_graph: 307px 0px -307px 0px 189px 128px 496px 418px '../img/sp_employ.png' 'employ-round_graph' 'sp_employ';
+$employ-sketch: 262px 313px -262px -313px 121px 105px 496px 418px '../img/sp_employ.png' 'employ-sketch' 'sp_employ';
+$employ-telescope: 0px 0px 0px 0px 297px 141px 496px 418px '../img/sp_employ.png' 'employ-telescope' 'sp_employ';
+
+//ancestor
+$sp_employ-width: 496px;
+$sp_employ-height: 418px;
+$sp_employ-image: '../img/sp_employ.png';
+$sp_employ-sprites: ($employ-box, $employ-building, $employ-car, $employ-puzzle, $employ-round_graph, $employ-sketch, $employ-telescope, );
+$sp_employ_sprites_name: (employ-box, employ-building, employ-car, employ-puzzle, employ-round_graph, employ-sketch, employ-telescope, );
+$sp_employ: (496px, 418px, '../img/sp_employ.png', $sp_employ-sprites, );
+
+//mixin
+@mixin sp_employ_img {
+	background-image: url(../img/sp_employ.png);
+}
+
+@mixin sp_employ($sprite) {
+	@include sp_employ_img;
+	@include spriteSizeSupport1x($sprite);
+	@include spriteBackgroundPositionSupport1x($sprite);
+}
+
+@mixin sp_employ_size($sprite) {
+	@include spriteSizeSupport1x($sprite);
+	@include spriteBackgroundPositionSupport1x($sprite);
+}
+
+@mixin sp_employ_on($sprite) {
+	@include sp_employ_img;
+	@include spriteBackgroundPositionSupport1x($sprite);
+}

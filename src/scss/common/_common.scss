@@ -14,3 +14,32 @@
 .swiper-slide {
 	display: block;
 }
+
+// 공통 타이틀
+.common_title {
+	color: #1B375B;
+	
+	font: {
+		size: 20px;
+		weight: 700;
+	}
+
+	&.sm {
+		font-size: 17px;
+	}
+}
+
+// 라인형태 컨텐츠 공통 설정
+.line_content_wrap {
+	display: block;
+	position: relative;
+	box-sizing: border-box;
+	border-top: 2px solid $navy;
+
+	.item_wrap {
+		display: block;
+		position: relative;
+		padding: 18px 20px 16px;
+		box-sizing: border-box;
+	}
+}

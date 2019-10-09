@@ -1,0 +1,275 @@
+// 인재채용
+
+// 공통 영역 설정
+.employ_content {
+	overflow: hidden;
+
+	// 공통영역간의 간격
+	+.employ_content {
+		margin-top: 30px;
+	}
+
+	// 공통 - 컨텐츠 영역
+	> .box_employ {
+		position: relative;
+		float: left;
+		width: 450px;
+		box-sizing: border-box;
+
+		+ .box_employ {
+			margin-left: 30px;
+		}
+	}
+
+	// 클릭 가능한 요소일 경우
+	a.box_employ,
+	a.line_content_wrap {
+		&:hover,
+		&:focus {
+			.common_title {
+				color: #fff;
+			}
+
+			.desc_feature {
+				color: #8598b2;
+			}
+		}
+	}
+
+	// 라인 타입
+	.line_box {
+		border: 1px solid #c9d1d7;
+		padding: 18px 20px 16px;
+		height: 250px;
+	}
+
+	// 배경있는 전체타입 컨텐츠
+	[class*=bg_] {
+		&:hover,
+		&:focus {
+			background-color: #354862;
+		}
+
+		&:before {
+			position: absolute;
+			content: '';
+		}
+	}
+
+	.line_content_wrap {
+		&:last-child {
+			border-bottom: 1px solid #c9d1d7;
+		}
+	}
+}
+
+// 채용정보 탭
+.list_employ_tab {
+	position: relative;
+
+	&:after {
+		display: block;
+		clear: both;
+		content: '';
+	}
+
+
+	// 남색 라인 설정
+	&:before {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 1px;
+		background-color: #1B375B;
+		content: '';
+	}
+
+	> li {
+		float: left;
+
+		+ li {
+			margin-left: 1px;
+		}
+
+		// 활성화 타입
+		&.on {
+			.title_tab {
+				position: relative;
+				background-color: #fff;
+				border: 1px solid #1B375B;
+				border-bottom: 1px solid #fff;
+				color: #1B375B;
+			}
+		}
+	}
+
+	// 탭메뉴
+	.title_tab {
+		display: block;
+		min-width: 88px;
+		padding: 8px 0;
+		border: 1px solid transparent;
+		background-color: #8396b2;
+		font-weight: 500;
+		color: #fff;
+		outline: none;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			background-color: #7286a3;
+		}
+	}
+}
+
+// 탭메뉴 컨텐츠
+.box_tab_content {
+	position: absolute;
+	right: 0;
+	left: 0;
+
+	.swiper-slide {
+		text-align: center;
+	}
+
+	// 카테고리
+	.item_employ {
+		display: inline-table;
+		margin-top: 33px;
+		table-layout: fixed;
+		
+		.title_employ {
+			display: table-cell;
+			vertical-align: middle;
+			width: 66px;
+			height: 66px;
+			background-color: #344763;
+			color: #fff;
+			text-align: center;
+			border-radius: 50%;
+		}
+	}
+
+	.tab_info_employ {
+		display: table-cell;
+		vertical-align: middle;
+		padding-left: 25px;
+		text-align: left;
+	}
+}
+
+// 인재상
+.bg_telescope {
+	&:before {
+		@include sp_employ($employ-telescope);
+
+		right: 30px;
+		bottom: 20px;
+	}
+}
+
+// 인사제도
+.bg_graph {
+	height: 175px;
+
+	&:before {
+		@include sp_employ($employ-round_graph);
+
+		top: 27px;
+		right: 20px;
+	}
+}
+
+// 복리후생
+.bg_puzzle {
+	height: 175px;
+
+	&:before {
+		@include sp_employ($employ-puzzle);
+
+		top: 15px;
+		right: 15px;
+	}
+}
+
+// 직무소개
+.item_skill {
+	height: 350px;
+
+	// 목록
+	.list_work {
+		overflow: hidden;
+		padding-top: 15px;
+		margin: -8px 0 0 -8px;
+
+		> li {
+			float: left;
+			margin: 8px 0 0 8px;
+
+			> a {
+				position: relative;
+				display: block;
+				width: 200px;
+				height: 114px;
+				padding: 20px 15px; 
+				background-color: #f5f5f5;
+				box-sizing: border-box;
+
+				&:hover,
+				&:focus {
+					background-color: $mainblue;
+
+					.name_skil {
+						color: #fff;
+					}
+				}
+				
+				//배경 이미지 설정
+				&:before {
+					@include sp_employ_img;
+
+					position: absolute;
+					top: 0;
+					right: 0;
+					content: '';
+				}
+
+				&.item_building {
+					&:before {
+						@include sp_employ_size($employ-building);
+					}
+				}
+
+				&.item_car {
+					&:before {
+						@include sp_employ_size($employ-car);
+
+						top: 8px;
+					}
+				}
+
+				&.item_box {
+					&:before {
+						@include sp_employ_size($employ-box);
+					}
+				}
+
+				&.item_sketch {
+					&:before {
+						@include sp_employ_size($employ-sketch);
+
+						top: 0px;
+						right: 10px;
+					}
+				}
+			}
+		}
+
+		// 직무 이름
+		.name_skil {
+			font-weight: 400;
+			color: #777;
+		}
+	}
+}

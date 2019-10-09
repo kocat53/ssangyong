@@ -130,7 +130,7 @@ function watchFiles() {
 	gulp.watch('src/**/*.pug', com_pug);
 	gulp.watch("src/js/*.js", js);
 	gulp.watch("src/img/*", image);
-	gulp.watch('dist/template', delFolder);
+	//gulp.watch('dist/template', delFolder); // 최종 완료되었을 경우 빌드로 빼야할듯
 	gulp.watch(
 		[
 			"dist/img/*",

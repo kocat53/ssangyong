@@ -123,6 +123,30 @@ table {
 	display: block;
 }
 
+.common_title {
+	color: #1B375B;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.common_title.sm {
+	font-size: 17px;
+}
+
+.line_content_wrap {
+	display: block;
+	position: relative;
+	box-sizing: border-box;
+	border-top: 2px solid #344763;
+}
+
+.line_content_wrap .item_wrap {
+	display: block;
+	position: relative;
+	padding: 18px 20px 16px;
+	box-sizing: border-box;
+}
+
 #header {
 	position: relative;
 	z-index: 20;
