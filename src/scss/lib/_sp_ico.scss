@@ -14,12 +14,12 @@ $sp_ico_sprites_name: (ico-ico_search, ico-logo, );
 $sp_ico: (149px, 52px, '../img/sp_ico.png', $sp_ico-sprites, );
 
 //mixin
-@mixin sp_ico_background_img {
+@mixin sp_ico_img {
 	background-image: url(../img/sp_ico.png);
 }
 
 @mixin sp_ico($sprite) {
-	@include sp_ico_background_img;
+	@include sp_ico_img;
 	@include spriteSizeSupport1x($sprite);
 	@include spriteBackgroundPositionSupport1x($sprite);
 }
@@ -30,6 +30,6 @@ $sp_ico: (149px, 52px, '../img/sp_ico.png', $sp_ico-sprites, );
 }
 
 @mixin sp_ico_on($sprite) {
-	@include sp_ico_background_img;
+	@include sp_ico_img;
 	@include spriteBackgroundPositionSupport1x($sprite);
 }

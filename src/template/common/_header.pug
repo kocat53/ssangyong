@@ -1,0 +1,138 @@
+mixin gnbTitle(text)
+   a.name_gnb_depth1(href='#;')!= text
+
+mixin gnbItem(text)
+   ul.gnb_depth2
+      each depthItem in text
+         li
+            a(href='#')!= depthItem
+
+// 헤더
+header#header.pr
+   // 로고
+   h1.logo
+      a(href='#;')
+         span.blind 쌍용자동차
+   // 헤더 상단
+   section.header_top
+      h2.blind 사용자 메뉴
+      .header_inner.clear
+         ul#user_menu.list_user_menu.fr
+            li
+               a(href='#;') 홈
+            li
+               a(href='#;') 로그인
+            // <li><a href="#;">로그아웃</a></li>
+            li
+               a(href='#;') 회원가입
+            li(style='margin-top:2px;')
+               a(href='#;') GLOBAL
+            li
+               a(href='#;') 고객센터
+            li.search_header
+               label(for='header_srh_form')
+                  span.blind 검색어를 입력해 주세요.
+                  input#header_srh_form(type='text')
+               button.btn_search
+                  span.blind 검색
+   // 헤더 하단
+   section.header_bottom
+      h2.blind 주메뉴
+      .header_inner.clear
+         // 주메뉴
+         ul#gnb.menu_gnb
+            // 차량정보
+            li.gnb_out_point
+               a(href='#;')
+                  span 차량정보
+               ul.gnb_depth1.type_car
+                  -
+                     var cars = [
+                        ['car_tivoli_air','car_tivoli_air','car_chairman','car_rexton','car_kc','car_ksport','car_turismo'],
+                        ['tivoli air','tivoli','chairman w','rexton w','new korando c','korandos sports','korando  turismo']
+                     ]
+                  -for(i=0;i<cars[0].length;i++)
+                     li
+                        a.gnb_car_area(href='#;')
+                           img(src=`img/${cars[0][i]}.png` alt='')
+                           strong.blind 차종 이름
+                           p.name_car!=cars[1][i]
+            // 구매정보
+            li
+               a(href='#;')
+                  span 구매정보
+               ul.gnb_depth1
+                  li
+                     +gnbTitle('견적서비스')
+                     +gnbItem(['간편견적','맞춤견적','비교견적','가격표','이달의 추천견적'])
+                  li
+                     +gnbTitle('판매네트워크안내')
+                     +gnbItem(['전시장찾기','전시장소식','전시장개설문의'])
+                  li
+                     +gnbTitle('시승신청')
+                     +gnbItem(['서울 강남시승센터','온라인 시승센터'])
+                  li
+                     +gnbTitle('상담신청')
+                     +gnbItem(['간단신청','맞춤신청','카탈로그 신청'])
+                  li
+                     +gnbTitle('구매조건')
+                     +gnbItem(['이달의 구매조건','E-mail 신청하기'])
+                  li
+                     +gnbTitle('시승기')
+                     +gnbItem(['티볼리','렉스턴 W','코란도 C','코란도 스포츠','코란도 투리스모'])
+                  li
+                     +gnbTitle('구매가이드')
+                     +gnbItem(['구매절차/할부정보','세금정보','보험안내','장애인구매','등록안내/유의사항'])
+            // 서비스
+            li
+               a(href='#;')
+                  span 서비스
+               ul.gnb_depth1
+                  li
+                     +gnbTitle('서비스안내')
+                     +gnbItem(['리멤버서비스' ,'오토카드서비스' ,'스마트멤버십' ,'정비서비스' ,'리멤버투어서비스' ,'리콜안내'])
+                  li
+                     +gnbTitle('판매네트워크안내')
+                     +gnbItem(['정비사업소', '정비센터', '지정공장', '서비스프라자', '부품대리점', '네트워크모집'])
+                  li
+                     +gnbTitle('차량관리안내')
+                     +gnbItem(['자가정비', '취급설명서', '순정부품/용품', 'FAQ', 'A/S매뉴얼', '내비게이션 Update'])
+                  li
+                     +gnbTitle('NEWS')
+                     +gnbItem(['공지사항', 'A/S Letter', 'EVENT',])
+                  li
+                     +gnbTitle('내차관리')
+                     +gnbItem(['내차정보관리', '정비예약', '정비이력', '부품정보', '스마트서비스', '차계부'])
+            li
+               a(href='#;')
+                  span PR센터
+               ul.gnb_depth1
+                  li
+                     +gnbTitle('회사소식')
+                     +gnbItem(['공지사항', '보도자료'])
+                  li
+                     +gnbTitle('미디어센터')
+                     +gnbItem(['TV CF', '지면광고', '기업홍보영상', 'BROCHURE'])
+                  li
+                     +gnbTitle('이벤트')
+                     +gnbItem(['진행중인 이벤트', '종료된 이벤트', '당첨자 발표'])
+                  li
+                     +gnbTitle('매거진')
+                     +gnbItem(['웹진', '사내보'])
+                  li
+                     +gnbTitle('역사관')
+                     +gnbItem(['역사관'])
+         // 서브 주메뉴
+         ul.page_menu.menu_gnb
+            li
+               a(href='#;')
+                  span 회사소개
+            li
+               a(href='#;')
+                  span IR
+            li
+               a(href='#;')
+                  span 인재채용
+         a.gnb_menu_all.gnb_out_point(href='#;') 전체메뉴
+      .gnb_bg(aria-hidden='true')
+   hr

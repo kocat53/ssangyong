@@ -1,12 +1,15 @@
 @charset 'UTF-8';
 
+// 헤더 섀도우 설정
 $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 
+// 헤더
 #header {
 	position: relative;
 	z-index: 20;
 }
 
+// gnb 오버시 나오는 딤드
 .gnb_dimmed {
 	display: none;
 	position: fixed;
@@ -15,7 +18,7 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 	bottom: 0;
 	left: 0;
 	z-index: 10;
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.8);
 
 	&.on {
 		display: block;
@@ -48,7 +51,7 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 	background-color: $base_gray;
 }
 
-// 헤더상단 - 사용자 메뉴
+// 헤더상단 - 사용자 메뉴(회색영역)
 .list_user_menu {
 	padding: 5px 0;
 
@@ -75,6 +78,7 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 			}
 		}
 
+		//검색영영 제외한 나머지 마진 설정
 		&:not(.search_header) {
 			margin-top: 1px;
 		}
@@ -101,6 +105,7 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 			outline: none;
 		}
 
+		// 검색버튼(돋보기)
 		.btn_search {
 			position: absolute;
 			top: 3px;
@@ -128,7 +133,7 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 	}
 }
 
-//  헤더 하단
+//  헤더 하단(주메뉴 영역)
 .header_bottom {
 	position: relative;
 	background-color: #fff;
@@ -141,28 +146,39 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 	}
 }
 
-// 주메뉴 공통 영역
+// 주메뉴 공통 설정
 .menu_gnb {
 	float: left;
 
 	> li {
 		float: left;
-
+		
+		// 섀도우 지정(z-index 이슈때문에 별도로 하나 더 지정)
 		&:before {
 			display: none;
 			position: absolute;
 			bottom: 0;
 			right: -999%;
 			left: -999%;
-			z-index: 10;
+			z-index: 200;
 			height: 4px;
 			box-shadow: $headerShadow;
 			content: '';
 		}
 
+		//  활성화
 		&.on {
 			&:before {
 				display: block;
+			}
+
+			> a {
+				> span {
+					// 라인 활성화
+					&:after {
+						display: block;
+					}
+				}
 			}
 		}
 		
@@ -174,6 +190,7 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 				position: relative;
 				font-weight: 500;
 
+				// 언더라인
 				&:after {
 					display: none;
 					position: absolute;
@@ -184,32 +201,14 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 					content: '';
 				}
 			}
-
-			&:hover,
-			&:focus {
-				> span {
-					&:after {
-						display: block;
-					}
-				}
-			}
 		}
 	}
 }
 
-// 주메뉴
+// 주메뉴(정보)
 #gnb {
-	&:before {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		right: 0;
-		background-color: $base_gray;
-		content: '';
-	}
-
 	> li {
-
+		// 활성화
 		&.on {
 			.gnb_depth1 {
 				display: block;
@@ -226,6 +225,10 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 			> a {
 				> span {
 					color: $softblue;
+
+					&:after {
+						background-color: $softblue;
+					}
 				}
 			}
 		}
@@ -237,10 +240,6 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 				padding: 20px 2px;
 				font-size: 16px;
 				color: #000;
-
-				&:after {
-					background-color: $softblue;
-				}
 			}
 		}
 	}
@@ -369,6 +368,15 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 	> li {
 		> a {
 			padding: 0 14px;
+			
+			&:hover,
+			&:focus {
+				> span {
+					&:after {
+						display: block;
+					}
+				}
+			}
 
 			> span {
 				padding: 22px 2px 21px;
@@ -392,6 +400,11 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 	background-color: $softblue;
 	font-size: 13px;
 	color: #fff;
+
+	&:hover,
+	&:focus {
+		background-color: #394d9e;
+	}
 }
 
 .gnb_bg {

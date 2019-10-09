@@ -1,10 +1,13 @@
 function CompanySlider() {
-	var mySwiper = new Swiper('.slider_wrap', {
+	var mySwiper = new Swiper('.slider_wrokspace > .swiper-container', {
 		loop: true,
+		autoplay: {
+			delay: 5000
+		},
 		spaceBetween:0,
 		navigation: {
-			nextEl: '.arrow_next',
-			prevEl: '.arrow_prev',
+			nextEl: '.slider_wrokspace .arrow_next',
+			prevEl: '.slider_wrokspace .arrow_prev',
 		},
 		pagination: {
 			el: '.workspace_dot',

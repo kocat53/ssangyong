@@ -37,7 +37,7 @@
 		box-sizing: border-box;
 
 		&:before {
-			@include sp_company_background_img;
+			@include sp_company_img;
 
 			position: absolute;
 			background-repeat: no-repeat;
@@ -153,7 +153,7 @@
 			}
 
 			&:before {
-				@include sp_company_background_img;
+				@include sp_company_img;
 
 				position: absolute;
 				background-repeat: no-repeat;
@@ -213,9 +213,12 @@
 	left: 0;
 	background-color: rgba($color: $navy, $alpha: 0.8);
 	padding: 5px 10px;
-	font-size: 13px;
-	font-weight: 400;
-	color: #fff;
+
+	> strong {
+		font-size: 13px;
+		font-weight: 400;
+		color: #fff;
+	}
 }
 
 .workspace_dot {
@@ -230,5 +233,31 @@
 
 	.swiper-pagination-bullet-active {
 		background-color: $navy;
+	}
+}
+
+.slider_wrokspace {
+	margin-top: 15px;
+}
+
+// 슬라이드용 화살표
+.btn_arrow {
+	position: absolute;
+	top: 50%;
+
+	&.arrow_prev {
+		left: 0;
+		transform: rotateY(180deg);
+	}
+
+	&.arrow_next {
+		right: 8px;
+	}
+
+	&:before {
+		@include sp_common($common-arw_right_9x17);
+
+		display: inline-block;
+		content: '';
 	}
 }

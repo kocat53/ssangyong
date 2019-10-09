@@ -53,6 +53,7 @@ function com_pug(done) {
 		.pipe(prettier({
 			tabWidth: 4,
 			parser: "html",
+			printWidth: 150,
 			useTabs: true,
 			htmlWhitespaceSensitivity: "ignore",
 		}))
@@ -62,7 +63,7 @@ function com_pug(done) {
 
 // 폴더 지우기
 function delFolder(done) {
-	return del('dist/template')
+	return del('dist/template');
 }
 
 // sass - css 컴파일
@@ -112,7 +113,7 @@ function js(done) {
 }
 
 function image(done) {
-	gulp.src(['src/img/*.png'])
+	gulp.src(['src/img/*.{png,gif,jpg}'])
 		.pipe(imagemin({
 			optimizationLevel: 1,
 			quality: '75',
@@ -142,7 +143,8 @@ function watchFiles() {
 }
 
 // task 변수 지정
-const watch = gulp.parallel(watchFiles,broserLive);
+const watch = gulp.parallel(watchFiles, broserLive);
+//const html = gulp.series(com_pug, delFolder);
 
 // task 용어 지정
 exports.html = com_pug;

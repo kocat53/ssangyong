@@ -1,5 +1,10 @@
 @charset 'UTF-8';
 
+#wrap {
+	min-width: 1100px;
+	overflow: hidden;
+}
+
 .content_inner {
 	width: 930px;
 	margin: 30px auto;
@@ -8,26 +13,4 @@
 // 슬라이더 초기화
 .swiper-slide {
 	display: block;
-}
-
-// 슬라이드용 화살표
-.btn_arrow {
-	position: absolute;
-	top: 50%;
-
-	&.arrow_prev {
-		left: -17px;
-		transform: rotateY(180deg);
-	}
-
-	&.arrow_next {
-		right: -10px;
-	}
-
-	&:before {
-		@include sp_common($common-arw_right_9x17);
-
-		display: inline-block;
-		content: '';
-	}
 }

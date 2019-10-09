@@ -196,6 +196,9 @@
 	left: 0;
 	background-color: rgba(52, 71, 99, 0.8);
 	padding: 5px 10px;
+}
+
+.box_workspace > strong {
 	font-size: 13px;
 	font-weight: 400;
 	color: #fff;
@@ -214,5 +217,32 @@
 
 .workspace_dot .swiper-pagination-bullet-active {
 	background-color: #344763;
+}
+
+.slider_wrokspace {
+	margin-top: 15px;
+}
+
+.btn_arrow {
+	position: absolute;
+	top: 50%;
+}
+
+.btn_arrow.arrow_prev {
+	left: 0;
+	transform: rotateY(180deg);
+}
+
+.btn_arrow.arrow_next {
+	right: 8px;
+}
+
+.btn_arrow:before {
+	background-image: url(../img/sp_common.png);
+	width: 9px;
+	height: 17px;
+	background-position: -48px -48px;
+	display: inline-block;
+	content: '';
 }
 /*# sourceMappingURL=contents.css.map */

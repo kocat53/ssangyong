@@ -19,12 +19,12 @@ $sp_company_sprites_name: (company-book, company-bridge, company-car_city, compa
 $sp_company: (448px, 413px, '../img/sp_company.png', $sp_company-sprites, );
 
 //mixin
-@mixin sp_company_background_img {
+@mixin sp_company_img {
 	background-image: url(../img/sp_company.png);
 }
 
 @mixin sp_company($sprite) {
-	@include sp_company_background_img;
+	@include sp_company_img;
 	@include spriteSizeSupport1x($sprite);
 	@include spriteBackgroundPositionSupport1x($sprite);
 }
@@ -35,6 +35,6 @@ $sp_company: (448px, 413px, '../img/sp_company.png', $sp_company-sprites, );
 }
 
 @mixin sp_company_on($sprite) {
-	@include sp_company_background_img;
+	@include sp_company_img;
 	@include spriteBackgroundPositionSupport1x($sprite);
 }

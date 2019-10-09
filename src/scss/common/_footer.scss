@@ -1,0 +1,86 @@
+//  푸터
+.footer_inner {
+	width: 980px;
+	margin: 0 auto;
+	padding: 40px 0 35px;
+	border-top: 1px solid #ededed;
+	text-align: center;
+}
+
+// 사이트 정보
+.list_footer_menu {
+	font-size: 0;
+
+	> li {
+		font-size: 11px;
+		display: inline-block;
+
+		+ li {
+			position: relative;
+			margin-left: 9px;
+			padding-left: 9px;
+
+			&:before {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 1px;
+				height: 9px;
+				margin-top: -4px;
+				background-color: #dfdfdf;
+				content: '';
+			}
+		}
+
+		> a {
+			color: #222;
+
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+			}
+
+			&.point {
+				font-weight: 600;
+				color: #4943c0;
+			}
+		}
+	}
+}
+
+// sns 공유
+.list_footer_sns {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -2px;
+
+	> li {
+		display: inline-block;
+
+		+ li {
+			margin-left: 4px;
+		}
+
+		> a {
+			@include sp_common_img;
+
+			display: block;
+
+			&.ico_twitter {
+				@include sp_common_size($common-twitter)
+			}
+
+			&.ico_facebook {
+				@include sp_common_size($common-facebook)
+			}
+
+			&.ico_blog {
+				@include sp_common_size($common-blog)
+			}
+		}
+	}
+}
+
+.copy {
+	font-size: 10px;
+}

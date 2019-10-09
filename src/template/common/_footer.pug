@@ -1,0 +1,30 @@
+// 하단
+footer#footer
+   section.footer_inner
+      h3.blind 사이트 정보 메뉴
+      ul.list_footer_menu
+         -var siteMenu = ['고객센터 080-500-5582','개인정보처리방침','이메일 무단수집거부','전체메뉴보기','사이버감사실','GLOBAL','영상정보처리기기 운영,관리 방침']
+         -for(f=0;f<siteMenu.length;f++)
+            if f == 1
+               li
+                  a(href="#;").point= siteMenu[f]
+            else if f > 4 
+               li
+                  a(href="#;")
+                     b!=siteMenu[f]
+            else
+               li
+                  a(href="#;")= siteMenu[f]
+         li
+            ul.list_footer_sns
+               li
+                  a(href="#;").ico_twitter
+                     span.blind 쌍용자동차 트위터 바로가기
+               li
+                  a(href="#;").ico_facebook
+                     span.blind 쌍용자동차 페이스북 바로가기
+               li
+                  a(href="#;").ico_blog
+                     span.blind 쌍용자동차 블로그 바로가기
+      address.copy  COPYRIGHT 2011 SSANGYONG COMPANY. ALL RESERVED.
+   hr

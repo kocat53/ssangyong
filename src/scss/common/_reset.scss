@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* 제작자 : 박종상*/
-html, body, h1, h2, h3, h4, h5, h6, dt, dl, dd, p, ul, li, ol, ul, strong, em, i, b, button, select, input, img, article, aside, figcaption, figure, footer, header, main, nav, output, section {
+html, body, h1, h2, h3, h4, h5, h6, dt, dl, dd, p, ul, li, ol, ul, strong, em, i, b, button, select, input, img, article, aside footer, header, main, nav, section {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -42,17 +42,9 @@ hr {
 	display: none;
 }
 
-.blind {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-}
-
 a {
 	text-decoration: none;
+	color: #444;
 }
 
 img {
@@ -89,6 +81,14 @@ table {
 	}
 }
 
+.blind {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+}
 
 .clear:after {
 	display: block;
