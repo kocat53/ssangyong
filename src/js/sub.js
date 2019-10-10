@@ -17,6 +17,28 @@ function CompanySlider() {
 	});
 }
 
+function employSlider() {
+	$('.list_employ_tab >li').click(function () {
+		$(this).addClass('on').siblings().removeClass('on');
+	});
+	var empslider = new Swiper('.box_tab_content > .swiper-container', {
+		loop: true,
+		autoplay: {
+			delay: 5000
+		},
+		navigation: {
+			nextEl: '.xi-angle-left',
+			prevEl: '.xi-angle-right',
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		},
+	})
+}
+
 $(function () {
 	CompanySlider();
+	employSlider();
 });

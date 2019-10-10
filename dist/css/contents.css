@@ -282,6 +282,7 @@
 
 .list_employ_tab {
 	position: relative;
+	margin-top: 18px;
 }
 
 .list_employ_tab:after {
@@ -316,6 +317,12 @@
 	color: #1B375B;
 }
 
+.list_employ_tab > li.on .box_tab_content {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+}
+
 .list_employ_tab .title_tab {
 	display: block;
 	min-width: 88px;
@@ -333,9 +340,12 @@
 }
 
 .box_tab_content {
+	display: none;
 	position: absolute;
 	right: 0;
 	left: 0;
+	opacity: 0;
+	visibility: hidden;
 }
 
 .box_tab_content .swiper-slide {
@@ -345,7 +355,12 @@
 .box_tab_content .item_employ {
 	display: inline-table;
 	margin-top: 33px;
+	padding: 0 20px;
 	table-layout: fixed;
+}
+
+.box_tab_content .item_employ:hover, .box_tab_content .item_employ:focus {
+	text-decoration: underline;
 }
 
 .box_tab_content .item_employ .title_employ {
@@ -364,6 +379,96 @@
 	vertical-align: middle;
 	padding-left: 25px;
 	text-align: left;
+}
+
+.box_tab_content .tab_info_employ > li {
+	font-size: 13px;
+}
+
+.box_tab_content .tab_info_employ > li:before {
+	display: inline-block;
+	vertical-align: middle;
+	width: 3px;
+	height: 3px;
+	border-radius: 50%;
+	background-color: #888;
+	content: '';
+}
+
+.box_tab_content .tab_info_employ > li.point {
+	color: #21528c;
+}
+
+.box_tab_content .tab_info_employ > li.point:before {
+	width: auto;
+	height: auto;
+	margin-right: 3px;
+	background-color: transparent;
+	border-radius: none;
+	content: '*';
+}
+
+.box_tab_content .tab_info_employ > li + li {
+	margin-top: 10px;
+}
+
+.box_tab_content .tab_info_employ .title {
+	font-weight: 400;
+}
+
+.box_tab_content > button {
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	color: #aebbc4;
+	font-size: 18px;
+	outline: none;
+}
+
+.box_tab_content > button:hover, .box_tab_content > button:focus {
+	color: #344763;
+}
+
+.box_tab_content > button.xi-angle-left {
+	left: -5px;
+}
+
+.box_tab_content > button.xi-angle-right {
+	right: -5px;
+}
+
+.box_tab_content .swiper-pagination {
+	text-align: center;
+	right: 0;
+	left: 0;
+	bottom: -25px;
+}
+
+.box_tab_content .swiper-pagination > span {
+	background-color: #43657c;
+}
+
+.box_tab_content .swiper-pagination > span + span {
+	margin-left: 10px;
+}
+
+.box_tab_content .no_content {
+	min-height: 100px;
+	padding: 10px 0;
+	text-align: center;
+}
+
+.box_tab_content .no_content:before {
+	display: inline-block;
+	vertical-align: middle;
+	height: 110px;
+	width: 1px;
+	content: '';
+}
+
+.box_tab_content .no_content > strong {
+	font-weight: 400;
+	color: #888;
 }
 
 .bg_telescope:before {

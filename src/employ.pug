@@ -1,61 +1,71 @@
 extends ./template/layout
 
 block content
-	//상단
-	.employ_content
-		// 채용공고
-		article.line_box.box_employ
-			+title('채용공고',f,'h2')
-			ul.list_employ_tab
-				-var tabText= ['전체','신입','경력','수시']
-				-for(e=0;e<4;e++)
-					if e == 0
-						li.on
-							button(type='button').title_tab=tabText[e]
-							.box_tab_content.swiper-container
-								.swiper-wrapper
-									.swiper-slide
-										a(href="#;").item_employ
-											strong.title_employ
-												span.blind 모집 직군
-												| 신입
-											ul.tab_info_employ
-												li
-													strong.title 접수기간
-													span.info 2016. 00. 00(월) ~ 00. 00 23:00 까지
-												li
-													strong.title 접수기간
-													span.info 2016. 00. 00(월) ~ 00. 00 23:00 까지
-												li.point
-													span.info 방문 및 우편, e-mail 접수는 받지 않습니다.
-					else 
-						li
-							button(type='button').title_tab=tabText[e]
+   //상단
+   .employ_content
+      // 채용공고
+      article.line_box.box_employ
+         +title('채용공고',f,'h2')
+         ul.list_employ_tab
+            -var tabText= ['전체','신입','경력','수시']
+            -for(e=0;e<4;e++)
+               if e == 0
+                  li.on
+                     button(type='button').title_tab=tabText[e]
+                     .box_tab_content
+                        .swiper-container
+                           .swiper-wrapper
+                              -for(e2=0;e2<2;e2++)
+                                 .swiper-slide
+                                    a(href="#;").item_employ
+                                       strong.title_employ
+                                          span.blind 모집 직군
+                                          | 신입
+                                       ul.tab_info_employ
+                                          li
+                                             strong.title 접수기간 :
+                                             span.info 2016. 00. 00(월) ~ 00. 00 23:00 까지
+                                          li
+                                             strong.title 접수기간 :
+                                             span.info 2016. 00. 00(월) ~ 00. 00 23:00 까지
+                                          li.point
+                                             span.info 방문 및 우편, e-mail 접수는 받지 않습니다.
+                        .swiper-pagination
+                        button(type='button').btn_left.xi-angle-left
+                           span.blind 이전
+                        button(type='button').btn_left.xi-angle-right
+                           span.blind 이전
+               else 
+                  li
+                     button(type='button').title_tab=tabText[e]
+                     .box_tab_content
+                        .no_content
+                           strong 현재 진행중인 채용공고가 없습니다.
 
-		// 인재상
-		a(href="#;").bg_telescope.line_box.box_employ
-			+title('인재상','세계를 무대로 꿈을 그려나갈 인재를 키웁니다.','h2')
-	// 하단
-	.employ_content
-		article.box_employ
-			// 인사제도
-			a(href="#;").bg_graph.line_content_wrap
-				.item_wrap
-					+title('인사제도','성과와 능력 위주의 인사관리','h2')
-			// 복리후생
-			a(href="#;").bg_puzzle.line_content_wrap
-				.item_wrap
-					+title('복리후생','고객, 회사, 임직원이 모두 함께<br/>윈-윈 할 수 있는 선진 복리후생제도 창출','h2')
-		article.box_employ
-			// 직무소개
-			.item_skill.line_content_wrap
-				.item_wrap
-					+title('직무소개','쌍용자동차의 직무를 소개합니다','h2')
-					ul.list_work
-						-
-							bg = ['building','car','box','sketch']
-							title = ['영업 & 마케팅','기술','관리','연구 & 개발']
-						-for(k=0;k<bg.length;k++)
-							li
-								a(href="#;" class=`item_${bg[k]}`)
-									strong.name_skil!=title[k]
+      // 인재상
+      a(href="#;").bg_telescope.line_box.box_employ
+         +title('인재상','세계를 무대로 꿈을 그려나갈 인재를 키웁니다.','h2')
+   // 하단
+   .employ_content
+      article.box_employ
+         // 인사제도
+         a(href="#;").bg_graph.line_content_wrap
+            .item_wrap
+               +title('인사제도','성과와 능력 위주의 인사관리','h2')
+         // 복리후생
+         a(href="#;").bg_puzzle.line_content_wrap
+            .item_wrap
+               +title('복리후생','고객, 회사, 임직원이 모두 함께<br/>윈-윈 할 수 있는 선진 복리후생제도 창출','h2')
+      article.box_employ
+         // 직무소개
+         .item_skill.line_content_wrap
+            .item_wrap
+               +title('직무소개','쌍용자동차의 직무를 소개합니다','h2')
+               ul.list_work
+                  -
+                     bg = ['building','car','box','sketch']
+                     title = ['영업 & 마케팅','기술','관리','연구 & 개발']
+                  -for(k=0;k<bg.length;k++)
+                     li
+                        a(href="#;" class=`item_${bg[k]}`)
+                           strong.name_skil!=title[k]
