@@ -147,6 +147,23 @@ table {
 	box-sizing: border-box;
 }
 
+.baisc_more {
+	font-size: 12px;
+	font-weight: 600;
+	color: #6b798f;
+}
+
+.baisc_more:hover, .baisc_more:focus {
+	text-decoration: underline;
+}
+
+.baisc_more > i {
+	margin-left: -2px;
+	font-weight: bold;
+	color: #adb5c2;
+	font-size: 11px;
+}
+
 #header {
 	position: relative;
 	z-index: 20;

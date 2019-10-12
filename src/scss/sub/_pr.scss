@@ -1,0 +1,108 @@
+// pr센터
+
+.split_content {
+	&:after {
+		display: block;
+		clear: both;
+		content: '';
+	}
+
+	// 좌측 컨텐츠
+	.split_left {
+		width: 410px;
+
+		.common_title {
+			+.list_title_notice {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	// 우측 컨텐츠
+	.split_right {
+		width: 490px;
+	}
+}
+
+// 제목이 있는 공지사항
+.list_title_notice {
+	> li {
+		position: relative;
+
+		+ li {
+			margin-top: 18px;
+			padding-top: 18px;
+			border-top: 1px solid #c8cfd9;
+		}
+	}
+
+	// 제목
+	.title_notice {
+		font-size: 16px;
+		font-weight: 600;
+		color: #333;
+
+		+ .list_notie_item{
+			margin-top: 17px;
+		}
+	}
+
+	// 더보기 버튼
+	.baisc_more {
+		position: absolute;
+		top: 4px;
+		right: -2px;
+	}
+}
+
+// 제목이 있는 공지사항의 세부 내용
+.list_notie_item {
+	> li {
+		position: relative;
+		line-height: 1.5;
+
+		&:before {
+			position: absolute;
+			top: 9px;
+			left: 0;
+			width: 3px;
+			height: 3px;
+			margin: 0 5px 0 0;
+			border-radius: 50%;
+			background-color: #95a6b2;
+			vertical-align: middle;
+			content: '';
+		}
+
+		+ li {
+			margin-top: 8px;
+		}
+
+		> a {
+			display: block;
+			overflow: hidden;
+			padding-left: 10px;
+
+			&:hover,
+			&:focus{
+				text-decoration: underline;
+			}
+		}
+	}
+
+	// 제목
+	.name_noticle {
+		@include ellipsis;
+
+		display: block;
+		font-size: 13px;
+		max-width: 80%;
+		color: #767676;
+	}
+
+	//날짜
+	.data_notice {
+		font-size: 13px;
+		color: #767676;
+	}
+}

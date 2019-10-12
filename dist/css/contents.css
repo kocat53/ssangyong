@@ -578,4 +578,95 @@
 	font-weight: 400;
 	color: #777;
 }
+
+.split_content:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
+.split_content .split_left {
+	width: 410px;
+}
+
+.split_content .split_left .common_title + .list_title_notice {
+	margin-top: 20px;
+}
+
+.split_content .split_right {
+	width: 490px;
+}
+
+.list_title_notice > li {
+	position: relative;
+}
+
+.list_title_notice > li + li {
+	margin-top: 18px;
+	padding-top: 18px;
+	border-top: 1px solid #c8cfd9;
+}
+
+.list_title_notice .title_notice {
+	font-size: 16px;
+	font-weight: 600;
+	color: #333;
+}
+
+.list_title_notice .title_notice + .list_notie_item {
+	margin-top: 17px;
+}
+
+.list_title_notice .baisc_more {
+	position: absolute;
+	top: 4px;
+	right: -2px;
+}
+
+.list_notie_item > li {
+	position: relative;
+	line-height: 1.5;
+}
+
+.list_notie_item > li:before {
+	position: absolute;
+	top: 9px;
+	left: 0;
+	width: 3px;
+	height: 3px;
+	margin: 0 5px 0 0;
+	border-radius: 50%;
+	background-color: #95a6b2;
+	vertical-align: middle;
+	content: '';
+}
+
+.list_notie_item > li + li {
+	margin-top: 8px;
+}
+
+.list_notie_item > li > a {
+	display: block;
+	overflow: hidden;
+	padding-left: 10px;
+}
+
+.list_notie_item > li > a:hover, .list_notie_item > li > a:focus {
+	text-decoration: underline;
+}
+
+.list_notie_item .name_noticle {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	display: block;
+	font-size: 13px;
+	max-width: 80%;
+	color: #767676;
+}
+
+.list_notie_item .data_notice {
+	font-size: 13px;
+	color: #767676;
+}
 /*# sourceMappingURL=contents.css.map */

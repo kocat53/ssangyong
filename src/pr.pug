@@ -1,0 +1,47 @@
+extends ./template/layout
+
+block content
+   .split_content
+      .split_left.fl
+         //회사소식
+         .item
+            article.line_content_wrap
+               .item_wrap
+                  +title('회사소식')
+                  ul.list_title_notice
+                     li
+                        .pr
+                           strong.title_notice 보도자료
+                           ul.list_notie_item
+                              -for(no=0;no<3;no++)
+                                 li
+                                    a(href="#;")
+                                       span.name_noticle.fl
+                                          em.blind 제목
+                                          span 일이삼사오육칠팔구십일이삼사오육칠팔구십
+                                       span.data_notice.fr
+                                          em.blind 게시날짜
+                                          span 2019.99.99
+                           a(href="#;").baisc_more
+                              span 더보기
+                              i.xi-angle-right(aria-hidden='true')
+                     li
+                        .pr
+                           strong.title_notice 공지사항
+                           ul.list_notie_item
+                              -for(no=0;no<3;no++)
+                                 li
+                                    a(href="#;")
+                                       span.name_noticle.fl
+                                          em.blind 제목
+                                          span aguyigituwqjuaaguyigituwqjuaaguyigituwqjuaaguyigituwqjua
+                                       span.data_notice.fr
+                                          em.blind 게시날짜
+                                          span 2019.99.99
+                           a(href="#;").baisc_more
+                              span 더보기
+                              i.xi-angle-right(aria-hidden='true')
+         //광고
+         .item
+            article.line_content_wrap
+      .split_right.fr

@@ -43,3 +43,22 @@
 		box-sizing: border-box;
 	}
 }
+
+// 공통 더보기
+.baisc_more {
+	font-size: 12px;
+	font-weight: 600;
+	color: #6b798f;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+
+	> i {
+		margin-left: -2px;
+		font-weight: bold;
+		color: #adb5c2;
+		font-size: 11px;
+	}
+}
