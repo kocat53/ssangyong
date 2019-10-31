@@ -143,6 +143,7 @@ table {
 .line_content_wrap .item_wrap {
 	display: block;
 	position: relative;
+	overflow: hidden;
 	padding: 18px 20px 16px;
 	box-sizing: border-box;
 }
@@ -343,7 +344,8 @@ table {
 }
 
 #gnb > li.on .gnb_depth1 {
-	display: block;
+	height: auto;
+	overflow: visible;
 }
 
 #gnb > li.on .gnb_depth1.type_car {
@@ -390,7 +392,8 @@ table {
 }
 
 .gnb_depth1 {
-	display: none;
+	height: 0;
+	overflow: hidden;
 	position: absolute;
 	top: 100%;
 	right: 0;
@@ -513,7 +516,7 @@ table {
 }
 
 .gnb_bg {
-	display: none;
+	height: 0;
 	position: absolute;
 	top: 100%;
 	right: 0;

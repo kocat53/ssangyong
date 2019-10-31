@@ -22,6 +22,10 @@
 	.split_right {
 		width: 490px;
 	}
+
+	+ .split_content {
+		margin-top: 14px;
+	}
 }
 
 // 제목이 있는 공지사항
@@ -30,9 +34,18 @@
 		position: relative;
 
 		+ li {
-			margin-top: 18px;
-			padding-top: 18px;
-			border-top: 1px solid #c8cfd9;
+			margin-top: 17px;
+			padding-top: 17px;
+			
+			&:before {
+				position: absolute;
+				top: 0;
+				right: -100%;
+				left: -100%;
+				height: 1px;
+				background-color: #c8cfd9;
+				content: '';
+			}
 		}
 	}
 
@@ -43,7 +56,7 @@
 		color: #333;
 
 		+ .list_notie_item{
-			margin-top: 17px;
+			margin-top: 15px;
 		}
 	}
 
@@ -75,7 +88,7 @@
 		}
 
 		+ li {
-			margin-top: 8px;
+			margin-top: 5px;
 		}
 
 		> a {
@@ -85,7 +98,10 @@
 
 			&:hover,
 			&:focus{
-				text-decoration: underline;
+				.name_noticle {
+					text-decoration: underline;
+					color: #333;
+				}
 			}
 		}
 	}
@@ -104,5 +120,122 @@
 	.data_notice {
 		font-size: 13px;
 		color: #767676;
+	}
+}
+
+// 지면,기업홍보영상 영역
+.wrap_pr_item {
+	.item_pr_box {
+		display: block;
+		width: 50%;
+		height: 237px;
+		padding: 25px 0;
+		text-align: center;
+		box-sizing: border-box;
+		background-repeat: no-repeat;
+		border-bottom: 1px solid #c8cfd9;
+	
+		+ .item_pr_box {
+			border-left: 1px solid #c8cfd9;
+		}
+		
+		// 4면이 라인인 타입
+		&.type_line {
+			width: 190px;
+			height: 220px;
+			padding: 15px 0;
+			border: 1px solid #c8cfd9;
+		}
+
+		&:hover,
+		&:focus {
+			background-color: #354862;
+
+			.pr_title {
+				color: #fff;
+			}
+		}
+		
+		// 지면 광고
+		&.bg_paper {
+			background-image: url(../img/newsPaper.png);
+			background-position: 40% 59px ;
+		}
+
+		// 홍보영상
+		&.bg_tv {
+			background-image: url(../img/pr_tv.png);
+			background-position: 49% 75px;
+		}
+
+		// 사내보
+		&.bg_magazin {
+			background-image: url(../img/pr_magazin.png);
+			background-position: 32% 91px;
+		}
+
+		// 웹진
+		&.bg_tablet {
+			background-image: url(../img/pr_tablet.png);
+			background-position: 32% 89px;
+		}
+
+		// 타이틀
+		.pr_title {
+			display: block;
+			margin-bottom: 5px;
+			font-size: 18px;
+			color: #344763;
+		}
+
+		.sub_title {
+			font-size: 12px;
+			color: #668dc6;
+		}
+	}
+}
+
+
+// 이벤트 슬라이드
+.slider_event_area {
+	position: relative;
+
+	.btn_arw {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 10;
+		color: #fff;
+		font-size: 26px;
+		
+		&.xi-angle-left-thin {
+			left: 10px;
+		}
+
+		&.xi-angle-right-thin {
+			right: 10px;
+		}
+	}
+}
+
+// 역사관
+.item_history {
+	min-height: 158px;
+	background-color:  #f9f9f9;
+	background-image: url(../img/pr_monitor.png);
+	background-repeat: no-repeat;
+	background-position: right 72px bottom 10px;
+
+	&:hover,
+	&:focus {
+		background-color: #344763;
+
+		.common_title {
+			color: #fff;
+		}
+
+		.desc_feature {
+			color: #668dc6;
+		}
 	}
 }

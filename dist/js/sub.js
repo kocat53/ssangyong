@@ -38,7 +38,26 @@ function employSlider() {
 	})
 }
 
+function prSlider() {
+	var prSlider = new Swiper('.slider_event_area > .swiper-container', {
+		loop: true,
+		autoplay: {
+			delay: 5000
+		},
+		navigation: {
+			nextEl: '.xi-angle-right-thin',
+			prevEl: '.xi-angle-left-thin',
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		},
+	})
+}
+
 $(function () {
 	CompanySlider();
 	employSlider();
+	prSlider();
 });

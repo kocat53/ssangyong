@@ -1,47 +1,96 @@
 extends ./template/layout
 
 block content
-   .split_content
-      .split_left.fl
-         //회사소식
-         .item
+   .sample
+      // 좌측 영역
+      .split_content
+         article.split_left.fl
+            //회사소식
+            h2.blind 회사소식
+            .item
+               article.line_content_wrap
+                  .item_wrap
+                     +title('회사소식')
+                     ul.list_title_notice
+                        li
+                           .pr
+                              strong.title_notice 보도자료
+                              ul.list_notie_item
+                                 -for(no=0;no<3;no++)
+                                    li
+                                       a(href="#;")
+                                          span.name_noticle.fl
+                                             em.blind 제목
+                                             span 일이삼사오육칠팔구십일이삼사오육칠팔구십
+                                          span.data_notice.fr
+                                             em.blind 게시날짜
+                                             span 2019.99.99
+                              a(href="#;").baisc_more
+                                 span 더보기
+                                 i.xi-angle-right(aria-hidden='true')
+                        li
+                           .pr
+                              strong.title_notice 공지사항
+                              ul.list_notie_item
+                                 -for(no=0;no<3;no++)
+                                    li
+                                       a(href="#;")
+                                          span.name_noticle.fl
+                                             em.blind 제목
+                                             span aguyigituwqjuaaguyigituwqjuaaguyigituwqjuaaguyigituwqjua
+                                          span.data_notice.fr
+                                             em.blind 게시날짜
+                                             span 2019.99.99
+                              a(href="#;").baisc_more
+                                 span 더보기
+                                 i.xi-angle-right(aria-hidden='true')
+         // 우측 영역
+         .split_right.fr
+            // 슬라이드
+            article.slider_event_area
+               h2.blind 이벤트 슬라이드영역
+               .swiper-container
+                  .swiper-wrapper
+                     -for(s=0; s<4;s++)
+                           a(href="#").swiper-slide
+                              img(src="img/sprite_sample1.png", alt="렛츠 고 온라인 견적 이벤트, 응모기간 2016년 5월 4일 수요일 부터 6월 30일 목요일 까지! , 당첨자는 16년도 7월 7일에 발표됩니다.") 
+                  .swiper-pagination
+                  button(type="button").btn_arw.xi-angle-left-thin
+                     span.blind 이벤트 슬라이드 이전 버튼
+                  button(type="button").btn_arw.xi-angle-right-thin
+                     span.blind 이벤트 슬라이드 다음 버튼
+      .split_content
+         article.split_left.fl
+            //광고
+            .item
+               article
+                  .wrap_pr_item.clear
+                     a(href="#;").item_pr_box.fl.type_line.bg_paper
+                        strong.pr_title 지면광고
+                     a(href="#;").item_pr_box.fr.type_line.bg_tv
+                        strong.pr_title 기업홍보영상
+                  .line_content_wrap.wrap_pr_item.clear(style="margin-top:30px")
+                     a(href="#;").item_pr_box.fl.bg_magazin
+                        strong.pr_title 사내보
+                        span(aria-hidden="true").sub_title magazine
+                     a(href="#;").item_pr_box.fl.bg_tablet
+                        strong.pr_title 웹진
+                        span(aria-hidden="true").sub_title Webzine
+         .split_right.fr
+            // 역사관
             article.line_content_wrap
-               .item_wrap
-                  +title('회사소식')
-                  ul.list_title_notice
-                     li
-                        .pr
-                           strong.title_notice 보도자료
-                           ul.list_notie_item
-                              -for(no=0;no<3;no++)
-                                 li
-                                    a(href="#;")
-                                       span.name_noticle.fl
-                                          em.blind 제목
-                                          span 일이삼사오육칠팔구십일이삼사오육칠팔구십
-                                       span.data_notice.fr
-                                          em.blind 게시날짜
-                                          span 2019.99.99
-                           a(href="#;").baisc_more
-                              span 더보기
-                              i.xi-angle-right(aria-hidden='true')
-                     li
-                        .pr
-                           strong.title_notice 공지사항
-                           ul.list_notie_item
-                              -for(no=0;no<3;no++)
-                                 li
-                                    a(href="#;")
-                                       span.name_noticle.fl
-                                          em.blind 제목
-                                          span aguyigituwqjuaaguyigituwqjuaaguyigituwqjuaaguyigituwqjua
-                                       span.data_notice.fr
-                                          em.blind 게시날짜
-                                          span 2019.99.99
-                           a(href="#;").baisc_more
-                              span 더보기
-                              i.xi-angle-right(aria-hidden='true')
-         //광고
-         .item
-            article.line_content_wrap
-      .split_right.fr
+               a(href="#;").item_wrap.item_history
+                  +title('역사관','쌍용자동차의 어제와 오늘<br/>그리고 내일을 말합니다.')
+            //동영상
+            article.video_content_wrap
+               h2.blind 동영상 컨텐츠 영역
+               ul.test
+                  li
+                     a(href="#;") ㅇㅇ
+                     ul.test_deptn
+                        li
+                           a(href="#;") 11
+                        li
+                           a(href="#;") 22
+                        li
+                           a(href="#;") 33

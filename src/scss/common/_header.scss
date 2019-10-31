@@ -211,7 +211,8 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 		// 활성화
 		&.on {
 			.gnb_depth1 {
-				display: block;
+				height: auto;
+				overflow: visible;
 
 				&.type_car {
 					display: table;
@@ -264,7 +265,8 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 
 // 뎁스1
 .gnb_depth1 {
-	display: none;
+	height: 0;
+	overflow: hidden;
 	position: absolute;
 	top: 100%;
 	right: 0;
@@ -408,7 +410,7 @@ $headerShadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 .gnb_bg {
-	display: none;
+	height: 0;
 	position: absolute;
 	top: 100%;
 	right: 0;

@@ -1,3 +1,4 @@
+// 헤더 - 검색영역 라인컬러 변경
 function headerSearch() {
 	$('.search_header input').on('focus',function () {
 		$(this).parents('li').addClass('on');
@@ -8,7 +9,15 @@ function headerSearch() {
 	});
 }
 
+// gnb 작업
 function gnb() {
+
+	function gnbOut(target) {
+		$(target).removeClass('on')
+		$('.gnb_dimmed').removeClass('on');
+		$('.gnb_bg').removeAttr('style');
+	};
+
 	$('#gnb > li').each(function () {
 		var $this = $(this),
 			$depth2 = $this.find('.gnb_depth1> li');
@@ -40,11 +49,23 @@ function gnb() {
 
 		// 마우스 out
 		$this.on('mouseleave', function () {
-			$this.removeClass('on');		
-			$('.gnb_dimmed').removeClass('on');
-			$('.gnb_bg').removeAttr('style');
+			gnbOut($this);
 		});
 	});
+
+	$('#gnb > li:first-child > a ').on('keydown', function (e) {
+		if (e.keyCode == 9 && e.shiftKey) { 
+			gnbOut('#gnb > li ');
+		}
+	});
+
+	$('#gnb > li:last-child > .gnb_depth1 > li:last-child > .gnb_depth2 > li:last-child > a ').on('keydown', function (e) {
+		if (e.keyCode == 9) {
+			console.log('나갔는데');
+			gnbOut('#gnb > li ');
+			console.log('왜 안꺼지지');
+		}
+	})
 }
 
 $(function () {

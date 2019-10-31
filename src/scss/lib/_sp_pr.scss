@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+// how to use : Use following mixins.
+// variable : [X-axis] [Y-axis] [offset_x] [offset_y] [width] [height] [total_width] [total_height] [image_url] [image_name] [folder_name]
+$pr-magazin: 282px 0px -282px 0px 170px 113px 452px 410px '../img/sp_pr.png' 'pr-magazin' 'sp_pr';
+$pr-monitor: 0px 0px 0px 0px 272px 134px 452px 410px '../img/sp_pr.png' 'pr-monitor' 'sp_pr';
+$pr-newsPaper: 0px 144px 0px -144px 135px 148px 452px 410px '../img/sp_pr.png' 'pr-newsPaper' 'sp_pr';
+$pr-tablet: 282px 123px -282px -123px 157px 119px 452px 410px '../img/sp_pr.png' 'pr-tablet' 'sp_pr';
+$pr-tv: 0px 302px 0px -302px 167px 108px 452px 410px '../img/sp_pr.png' 'pr-tv' 'sp_pr';
+
+//ancestor
+$sp_pr-width: 452px;
+$sp_pr-height: 410px;
+$sp_pr-image: '../img/sp_pr.png';
+$sp_pr-sprites: ($pr-magazin, $pr-monitor, $pr-newsPaper, $pr-tablet, $pr-tv, );
+$sp_pr_sprites_name: (pr-magazin, pr-monitor, pr-newsPaper, pr-tablet, pr-tv, );
+$sp_pr: (452px, 410px, '../img/sp_pr.png', $sp_pr-sprites, );
+
+//mixin
+@mixin sp_pr_img {
+	background-image: url(../img/sp_pr.png);
+}
+
+@mixin sp_pr($sprite) {
+	@include sp_pr_img;
+	@include spriteSizeSupport1x($sprite);
+	@include spriteBackgroundPositionSupport1x($sprite);
+}
+
+@mixin sp_pr_size($sprite) {
+	@include spriteSizeSupport1x($sprite);
+	@include spriteBackgroundPositionSupport1x($sprite);
+}
+
+@mixin sp_pr_on($sprite) {
+	@include sp_pr_img;
+	@include spriteBackgroundPositionSupport1x($sprite);
+}
