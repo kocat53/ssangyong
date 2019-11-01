@@ -239,3 +239,11 @@
 		}
 	}
 }
+
+// 비디오 영역
+.video_frame {
+	margin-top: 30px;
+	iframe {
+		width: 100%;
+	}
+}

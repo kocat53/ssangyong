@@ -786,4 +786,12 @@
 .item_history:hover .desc_feature, .item_history:focus .desc_feature {
 	color: #668dc6;
 }
+
+.video_frame {
+	margin-top: 30px;
+}
+
+.video_frame iframe {
+	width: 100%;
+}
 /*# sourceMappingURL=contents.css.map */
