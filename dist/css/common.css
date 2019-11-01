@@ -101,6 +101,10 @@ table {
 	float: right;
 }
 
+.tc {
+	text-align: center;
+}
+
 .pr {
 	position: relative;
 }
@@ -163,6 +167,18 @@ table {
 	font-weight: bold;
 	color: #adb5c2;
 	font-size: 11px;
+}
+
+.hover:hover, .hover:focus {
+	background-color: #344763 !important;
+}
+
+.hover:hover .common_title, .hover:focus .common_title {
+	color: #fff !important;
+}
+
+.hover:hover .desc_feature, .hover:focus .desc_feature {
+	color: #8598b2 !important;
 }
 
 #header {

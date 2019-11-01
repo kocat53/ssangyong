@@ -63,3 +63,19 @@
 		font-size: 11px;
 	}
 }
+
+//  hover시 변하는게 똑같은 컨텐츠
+.hover {
+	&:hover,
+	&:focus {
+		background-color: $navy !important;
+
+		.common_title {
+			color: #fff !important;
+		}
+
+		.desc_feature {
+			color: #8598b2 !important;
+		}
+	}
+}

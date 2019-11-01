@@ -149,7 +149,7 @@
 
 		&:hover,
 		&:focus {
-			background-color: #354862;
+			background-color: $navy;
 
 			.pr_title {
 				color: #fff;
@@ -225,19 +225,6 @@
 	background-image: url(../img/pr_monitor.png);
 	background-repeat: no-repeat;
 	background-position: right 72px bottom 10px;
-
-	&:hover,
-	&:focus {
-		background-color: $navy;
-
-		.common_title {
-			color: #fff;
-		}
-
-		.desc_feature {
-			color: #668dc6;
-		}
-	}
 }
 
 // 비디오 영역

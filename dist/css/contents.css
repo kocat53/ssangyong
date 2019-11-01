@@ -81,6 +81,7 @@
 	margin-top: 7px;
 	font-size: 12px;
 	color: #777;
+	line-height: 1.45;
 }
 
 .company_info {
@@ -113,18 +114,6 @@
 
 .list_company_info .line_content_wrap .item_wrap {
 	height: 150px;
-}
-
-.list_company_info .line_content_wrap .item_wrap:hover, .list_company_info .line_content_wrap .item_wrap:focus {
-	background-color: #344763;
-}
-
-.list_company_info .line_content_wrap .item_wrap:hover .common_title, .list_company_info .line_content_wrap .item_wrap:focus .common_title {
-	color: #fff;
-}
-
-.list_company_info .line_content_wrap .item_wrap:hover .desc_feature, .list_company_info .line_content_wrap .item_wrap:focus .desc_feature {
-	color: #8598b2;
 }
 
 .list_company_info .line_content_wrap .item_wrap:before {
@@ -249,26 +238,10 @@
 	margin-left: 30px;
 }
 
-.employ_content a.box_employ:hover .common_title, .employ_content a.box_employ:focus .common_title,
-.employ_content a.line_content_wrap:hover .common_title,
-.employ_content a.line_content_wrap:focus .common_title {
-	color: #fff;
-}
-
-.employ_content a.box_employ:hover .desc_feature, .employ_content a.box_employ:focus .desc_feature,
-.employ_content a.line_content_wrap:hover .desc_feature,
-.employ_content a.line_content_wrap:focus .desc_feature {
-	color: #8598b2;
-}
-
 .employ_content .line_box {
 	border: 1px solid #c9d1d7;
 	padding: 18px 20px 16px;
 	height: 250px;
-}
-
-.employ_content [class*=bg_]:hover, .employ_content [class*=bg_]:focus {
-	background-color: #354862;
 }
 
 .employ_content [class*=bg_]:before {
@@ -707,7 +680,7 @@
 }
 
 .wrap_pr_item .item_pr_box:hover, .wrap_pr_item .item_pr_box:focus {
-	background-color: #354862;
+	background-color: #344763;
 }
 
 .wrap_pr_item .item_pr_box:hover .pr_title, .wrap_pr_item .item_pr_box:focus .pr_title {
@@ -775,23 +748,203 @@
 	background-position: right 72px bottom 10px;
 }
 
-.item_history:hover, .item_history:focus {
-	background-color: #344763;
-}
-
-.item_history:hover .common_title, .item_history:focus .common_title {
-	color: #fff;
-}
-
-.item_history:hover .desc_feature, .item_history:focus .desc_feature {
-	color: #668dc6;
-}
-
 .video_frame {
 	margin-top: 30px;
 }
 
 .video_frame iframe {
 	width: 100%;
+}
+
+.box_ir_left {
+	width: 610px;
+}
+
+.box_ir_right {
+	width: 290px;
+}
+
+.box_company_info {
+	padding: 24px 15px;
+	border: 1px solid #c8cfd9;
+}
+
+.box_company_info .title {
+	font-size: 24px;
+	color: #344763;
+}
+
+.box_company_info .title + .desc_title {
+	margin-top: 12px;
+}
+
+.box_company_info .desc_title {
+	color: #5b8cd5;
+}
+
+.list_ir_feature {
+	display: table;
+	width: 100%;
+	margin-top: 15px;
+	table-layout: fixed;
+}
+
+.list_ir_feature > li {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.list_ir_feature > li > a:hover .title_item, .list_ir_feature > li > a:focus .title_item {
+	text-decoration: underline;
+}
+
+.list_ir_feature .title_item {
+	margin-top: 4px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.stock_content .baisc_more {
+	position: absolute;
+	top: 24px;
+	right: 20px;
+}
+
+.stock_wrap {
+	padding: 20px 20px 15px;
+}
+
+.main_stock_wrap {
+	margin-top: 20px;
+}
+
+.main_stock_wrap .name_stock {
+	font-size: 13px;
+	color: #777;
+}
+
+.main_stock_wrap .main_stock_state {
+	text-align: right;
+}
+
+.main_stock_wrap .main_stock_state .value {
+	display: block;
+	font-weight: 600;
+	font-size: 26px;
+	letter-spacing: -1px;
+}
+
+.main_stock_wrap .main_stock_state .state {
+	display: inline-block;
+	position: relative;
+	margin-top: 4px;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.main_stock_wrap .main_stock_state .state:before {
+	display: inline-block;
+	vertical-align: middle;
+	margin: -2px 5px 0 0;
+	content: '';
+}
+
+.main_stock_wrap .main_stock_state .state.up {
+	color: #ff552b;
+}
+
+.main_stock_wrap .main_stock_state .state.up:before {
+	border-style: solid;
+	border-width: 0 7px 10px 7px;
+	border-color: transparent transparent #ff552b transparent;
+}
+
+.list_ir_stock > li {
+	padding: 10px 20px;
+	border-top: 1px solid #c8cfd9;
+}
+
+.list_ir_stock .name_stock {
+	font-size: 13px;
+	color: #777;
+	font-weight: normal;
+}
+
+.list_ir_stock .date_stock {
+	font-size: 12px;
+	color: #777;
+}
+
+.list_ir_stock .state_stock {
+	display: inline-block;
+	min-width: 50px;
+	margin-left: 5px;
+	font-size: 12px;
+	color: #666;
+	text-align: right;
+}
+
+.list_ir_stock .state_stock.up {
+	color: #ff562c;
+}
+
+.list_ir_stock .state_stock.down {
+	color: #4384e4;
+}
+
+.item_finance,
+.item_data {
+	height: 130px;
+	background-repeat: no-repeat;
+}
+
+.item_finance {
+	background-image: url(../img/ir_card_graph.png);
+	background-position: top 17px right 20px;
+}
+
+.item_data {
+	background-image: url(../img/ir_round_graph.png);
+	background-position: right center;
+	background-color: #f9f9f9;
+}
+
+.item_ir_data {
+	background: #f9f9f9 url(../img/ir_book.png) no-repeat;
+	background-position: right 12px bottom 12px;
+}
+
+.list_button_content > li {
+	overflow: hidden;
+	padding: 7px 22px;
+	border-bottom: 1px solid #c9d1d7;
+}
+
+.list_button_content > li:first-child {
+	border-top: 1px solid #c9d1d7;
+}
+
+.list_button_content > li .text {
+	float: left;
+	margin-top: 6px;
+	font-size: 13px;
+	color: #777;
+}
+
+.list_button_content > li .btn_wrap {
+	float: right;
+}
+
+.list_button_content > li .btn_ir {
+	display: inline-block;
+	padding: 5px 15px;
+	border: 1px solid #abb9cd;
+	color: #4b6388;
+}
+
+.list_button_content > li .btn_ir:hover, .list_button_content > li .btn_ir:focus {
+	color: #fff;
+	background-color: #4b6388;
+	border-color: #4b6388;
 }
 /*# sourceMappingURL=contents.css.map */

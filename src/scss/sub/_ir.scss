@@ -1,0 +1,222 @@
+// IR 센터
+
+// 왼쪽
+.box_ir_left {
+	width: 610px;
+}
+
+// 오른쪽 
+.box_ir_right {
+	width: 290px;
+}
+
+//  기업정보
+.box_company_info {
+	padding: 24px 15px;
+	border: 1px solid $line_soft_gray;
+
+	.title {
+		font-size: 24px;
+		color: $navy; 
+
+		+ .desc_title {
+			margin-top: 12px;
+		}
+	}
+
+	.desc_title {
+		color: #5b8cd5;
+	}
+}
+
+// 기업정보 목록
+.list_ir_feature {
+	display: table;
+	width: 100%;
+	margin-top: 15px;
+	table-layout: fixed;
+
+	> li {
+		display: table-cell;
+		vertical-align: middle;
+
+		> a {
+			&:hover,
+			&:focus {
+				.title_item {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	.title_item {
+		margin-top: 4px;
+		font-size: 14px;
+		font-weight: 600;
+	}
+}
+
+.stock_content {
+	.baisc_more {
+		position: absolute;
+		top: 24px;
+		right: 20px;
+	}
+}
+
+// 주가 정보
+.stock_wrap {
+	padding: 20px 20px 15px;
+}
+
+// 쌍용 자동차 주가정보
+.main_stock_wrap {
+	margin-top: 20px;
+
+	// 주가 명
+	.name_stock {
+		font-size: 13px;
+		color: #777;
+	}
+
+	// 주가지수
+	.main_stock_state {
+		text-align: right;
+		// 지수
+		.value {
+			display: block;
+			font-weight: 600;
+			font-size: 26px;
+			letter-spacing: -1px;
+		}
+
+		// 증가 상태
+		.state {
+			display: inline-block;
+			position: relative;
+			margin-top: 4px;
+			font-size: 15px;
+			font-weight: 600;
+
+			&:before {
+				display: inline-block;
+				vertical-align: middle;
+				margin: -2px 5px 0 0;
+				content: '';
+			}
+
+			&.up {
+				color: #ff552b;
+
+				&:before {
+					border-style: solid;
+					border-width: 0 7px 10px 7px;
+					border-color: transparent transparent #ff552b transparent;
+				}
+			}
+		}
+	}
+}
+
+// 주가정보 리스트
+.list_ir_stock {
+	> li {
+		padding: 10px 20px;
+		border-top: 1px solid #c8cfd9;
+	}
+
+	// 지수 명
+	.name_stock {
+		font-size: 13px;
+		color: #777;
+		font-weight: normal;
+	}
+
+	// 기수 값
+	.date_stock {
+		font-size: 12px;
+		color: #777;
+	}
+
+	// 등락
+	.state_stock {
+		display: inline-block;
+		min-width: 50px;
+		margin-left: 5px;
+		font-size: 12px;
+		color: #666;
+		text-align: right;
+
+		&.up {
+			color: #ff562c;
+		}
+
+		&.down {
+			color: #4384e4;
+		}
+	}
+}
+
+.item_finance,
+.item_data {
+	height: 130px;
+	background-repeat: no-repeat;
+}
+
+// 재무정보
+.item_finance {
+	background-image: url(../img/ir_card_graph.png);
+	background-position: top 17px right 20px;
+}
+
+// 공시자료
+.item_data {
+	background-image: url(../img/ir_round_graph.png);
+	background-position: right center;
+	background-color: #f9f9f9;
+}
+
+// ir 자료실
+.item_ir_data {
+	background: #f9f9f9 url(../img/ir_book.png) no-repeat;
+	background-position: right 12px bottom 12px;
+}
+
+// IR 활동 리스트
+.list_button_content {
+	> li {
+		overflow: hidden;
+		padding: 7px 22px;
+		border-bottom: 1px solid #c9d1d7;
+
+		&:first-child {
+			border-top: 1px solid #c9d1d7;
+		}
+
+		.text {
+			float: left;
+			margin-top: 6px;
+			font-size: 13px;
+			color: #777;
+		}
+
+		.btn_wrap {
+			float: right;
+		}
+
+		.btn_ir {
+			display: inline-block;
+			padding: 5px 15px;
+			border: 1px solid #abb9cd;
+			color: #4b6388;
+
+			&:hover,
+			&:focus {
+				color: #fff;
+				background-color: #4b6388;
+				border-color: #4b6388;
+			}
+		}
+	}
+}

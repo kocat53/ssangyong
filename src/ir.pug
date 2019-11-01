@@ -1,3 +1,100 @@
 extends ./template/layout
 
 block content
+   // 주가 & 기업
+   .clear
+      //기업정보
+      .box_ir_left.fl
+         .box_company_info
+            article.tc
+               .title_area
+                  h2.title 기업정보
+                  p.desc_title 쌍용자동차는 정도 경영을 실천하고 있습니다.
+               ul.list_ir_feature(aria-label="기업정보 특징 목록")
+                  - var cp_img = ['ir_building','ir_paper','ir_pyramid']
+                  - var cp_text = ['회사개요','대표이사 인사말','지배구조']
+                  -for(cp=0;cp<cp_text.length;cp++)
+                     li
+                        a(href="#;")
+                           div.img_area
+                              img(src=`img/${cp_img[cp]}.png`, alt="")
+                           strong.title_item= cp_text[cp]
+      //주가정보
+      .box_ir_right.fr
+         .line_content_wrap.stock_content
+            // 주가정보
+            section.stock_wrap
+               +title('주가정보','쌍용자동차의 주가정보를 <br/>실시간으로 볼 수 있습니다.','h2')
+               .main_stock_wrap.clear
+                  storng.name_stock.fl
+                     | 쌍용자동차
+                  .main_stock_state.fr
+                     p.value
+                        i.blind 현재 값
+                        | 7,999
+                     p.state.up
+                        i.blind 변동상태
+                        | 20 <i class="blind">상승</i>
+
+            // 주가 리스트
+            section.stock_list_wrap
+               h2.blind 기타 지수정보
+               ul.list_ir_stock
+                  -
+                     var  stock = {
+                        name: ['코스피','환율(원/달러)','Dow','Nasdaq'],
+                        val:['1,961,63','1,125.25','999,999','999,999'],
+                        state:['- 17.34','- 5.50','- 5.22','+ 2.36']
+                     }
+                  -for(s=0;s<stock.name.length;s++)
+                     li.clear
+                        strong.name_stock.fl
+                           i.blind 지수명
+                           != stock.name[s]
+                        .date_wrap.fr
+                           em.date_stock 
+                              i.blind 현재 값
+                              != stock.val[s]
+                           if s > 2
+                              span.state_stock.up
+                                 i.blind 지수 변동 상태
+                                 != stock.state[s]
+                           else 
+                              span.state_stock.down
+                                 i.blind 지수 변동 상태
+                                 != stock.state[s]
+            +bnMore()
+   // 재무 & 공시
+   .clear
+      // 재무정보
+      .box_ir_left.fl
+         a(href="#;").line_content_wrap.item_finance.hover
+            article.item_wrap 
+               +title('재무정보','투명하고 효율적인 선진경영!<br/>쌍용자동차가 함께 이끌어 갑니다.','h2')
+      .box_ir_right.fr
+         a(href="#;").line_content_wrap.item_data.hover
+            article.item_wrap 
+               +title('공시자료','금융감독원의 전자공시시스템<br/>공시자료로 이동 가능합니다.','h2')
+   // 활동, 자료실
+   .clear
+      // 활동
+      .box_ir_left.fl
+         .line_content_wrap
+            article.item_wrap
+               +title('IR활동',f,'h2')
+            ul.list_button_content
+               -for(lb=0;lb<=2;lb++)
+                  li 
+                     span.text
+                        i.blind 작성일
+                        | [2016.06.23]
+                        i.blind 내용
+                        | 미래에셋 대우 Corporate Day
+                     .btn_wrap
+                        a(href="#;").btn_ir 관련파일보기
+
+      // 자료실
+      .box_ir_right.fr
+         a(href="#;").line_content_wrap.item_ir_data.hover(style="height:198px")
+            article.item_wrap
+               +title('IR자료실','판매 및 경영실적 등의 자료를 볼 수  있습니다.','h2')

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>쌍용자동차 :: 포트폴리오</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="2016년에 작업한 쌍용자동차 사이트를 다시 만들어봄" />
+		<!-- CSS-->
+		<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&amp;display=swap&amp;subset=korean" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/contents.css" />
+	</head>
+	<body>
+		<div id="skip">
+			<a href="#user_menu">사용자메뉴 바로가기</a>
+			<a href="#gnb">주메뉴 바로가기</a>
+			<a href="#container">본문 바로가기</a>
+		</div>
+		<div id="wrap">
+			<!-- 헤더-->
+			<header id="header" role="banner">
+				<!-- 로고-->
+				<h1 class="logo">
+					<a href="#;"><span class="blind">쌍용자동차</span></a>
+				</h1>
+				<!-- 헤더 상단-->
+				<section class="header_top">
+					<h2 class="blind">사용자 메뉴</h2>
+					<div class="header_inner clear">
+						<ul class="list_user_menu fr" id="user_menu">
+							<li><a href="#;">홈</a></li>
+							<li><a href="#;">로그인</a></li>
+							<!-- <li><a href="#;">로그아웃</a></li>-->
+							<li><a href="#;">회원가입</a></li>
+							<li style="margin-top:2px;"><a href="#;">GLOBAL</a></li>
+							<li><a href="#;">고객센터</a></li>
+							<li class="search_header">
+								<label for="header_srh_form">
+									<span class="blind">검색어를 입력해 주세요.</span>
+									<input id="header_srh_form" type="text" />
+								</label>
+								<button class="btn_search"><span class="blind">검색</span></button>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<!-- 헤더 하단-->
+				<section class="header_bottom">
+					<h2 class="blind">주메뉴</h2>
+					<div class="header_inner clear">
+						<!-- 주메뉴-->
+						<ul class="menu_gnb" id="gnb">
+							<!-- 차량정보-->
+							<li class="gnb_out_point">
+								<a href="#;"><span>차량정보</span></a>
+								<ul class="gnb_depth1 type_car">
+									<li>
+										<a class="gnb_car_area" href="#;">
+											<img src="img/car_tivoli_air.png" alt="" />
+											<strong class="blind">차종 이름</strong>
+											<p class="name_car">tivoli air</p>
+										</a>
+									</li>
+									<li>
+										<a class="gnb_car_area" href="#;">
+											<img src="img/car_tivoli_air.png" alt="" />
+											<strong class="blind">차종 이름</strong>
+											<p class="name_car">tivoli</p>
+										</a>
+									</li>
+									<li>
+										<a class="gnb_car_area" href="#;">
+											<img src="img/car_chairman.png" alt="" />
+											<strong class="blind">차종 이름</strong>
+											<p class="name_car">chairman w</p>
+										</a>
+									</li>
+									<li>
+										<a class="gnb_car_area" href="#;">
+											<img src="img/car_rexton.png" alt="" />
+											<strong class="blind">차종 이름</strong>
+											<p class="name_car">rexton w</p>
+										</a>
+									</li>
+									<li>
+										<a class="gnb_car_area" href="#;">
+											<img src="img/car_kc.png" alt="" />
+											<strong class="blind">차종 이름</strong>
+											<p class="name_car">new korando c</p>
+										</a>
+									</li>
+									<li>
+										<a class="gnb_car_area" href="#;">
+											<img src="img/car_ksport.png" alt="" />
+											<strong class="blind">차종 이름</strong>
+											<p class="name_car">korandos sports</p>
+										</a>
+									</li>
+									<li>
+										<a class="gnb_car_area" href="#;">
+											<img src="img/car_turismo.png" alt="" />
+											<strong class="blind">차종 이름</strong>
+											<p class="name_car">korando turismo</p>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<!-- 구매정보-->
+							<li>
+								<a href="#;"><span>구매정보</span></a>
+								<ul class="gnb_depth1">
+									<li>
+										<a class="name_gnb_depth1" href="#;">견적서비스</a>
+										<ul class="gnb_depth2">
+											<li><a href="#">간편견적</a></li>
+											<li><a href="#">맞춤견적</a></li>
+											<li><a href="#">비교견적</a></li>
+											<li><a href="#">가격표</a></li>
+											<li><a href="#">이달의 추천견적</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="name_gnb_depth1" href="#;">판매네트워크안내</a>
+										<ul class="gnb_depth2">
+											<li><a href="#">전시장찾기</a></li>
+											<li><a href="#">전시장소식</a></li>
+											<li><a href="#">전시장개설문의</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="name_gnb_depth1" href="#;">시승신청</a>
+										<ul class="gnb_depth2">
+											<li><a href="#">서울 강남시승센터</a></li>
+											<li><a href="#">온라인 시승센터</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="name_gnb_depth1" href="#;">상담신청</a>
+										<ul class="gnb_depth2">
+											<li><a href="#">간단신청</a></li>
+											<li><a href="#">맞춤신청</a></li>
+											<li><a href="#">카탈로그 신청</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="name_gnb_depth1" href="#;">구매조건</a>
+										<ul class="gnb_depth2">
+											<li><a href="#">이달의 구매조건</a></li>
+											<li><a href="#">E-mail 신청하기</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="name_gnb_depth1" href="#;">시승기</a>
+										<ul class="gnb_depth2">
+											<li><a href="#">티볼리</a></li>
+											<li><a href="#">렉스턴 W</a></li>
+											<li><a href="#">코란도 C</a></li>
+											<li><a href="#">코란도 스포츠</a></li>
+											<li><a href="#">코란도 투리스모</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="name_gnb_depth1" href="#;">구매가이드</a>
+										<ul class="gnb_depth2">
+											<li><a href="#">구매절차/할부정보</a></li>
+											<li><a href="#">세금정보</a></li>
+											<li><a href="#">보험안내</a></li>
+											<li><a href="#">장애인구매</a></li>
+											<li><a href="#">등록안내/유의사항</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<!-- 서비스-->
+							<li>
+								<a href="#;"><span>서비스</span></a>
+								<ul class="gnb_depth1">
+									<li>
+										<a class="name_gnb_depth1" href="#;">서비스안내</a>
+										<ul class="gnb_depth2">
+											<li><a href="#">리멤버서비스</a></li>
+											<li><a href="#">오토카드서비스</a></li>
+											<li><a href="#">스마트멤버십</a></li>
+											<li><a href="#">정비서비스</a></li>
+											<li><a href="#">리멤버투어서비스</a></li>
+											<li><a href="#">리콜안내</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="name_gnb_depth1" href="#;">판매네트워크안내</a>
+										<ul class="gnb_depth2">
+											<li><a href="#">정비사업소</a></li>
+											<li><a href="#">정비센터</a></li>
+											<li><a href="#">지정공장</a></li>
+											<li><a href="#">서비스프라자</a></li>
+											<li><a href="#">부품대리점</a></li>
+											<li><a href="#">네트워크모집</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="name_gnb_depth1" href="#;">차량관리안내</a>
+										<ul class="gnb_depth2">
+											<li><a href="#">자가정비</a></li>
+											<li><a href="#">취급설명서</a></li>
+											<li><a href="#">순정부품/용품</a></li>
+											<li><a href="#">FAQ</a></li>
+											<li><a href="#">A/S매뉴얼</a></li>
+											<li><a href="#">내비게이션 Update</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="name_gnb_depth1" href="#;">NEWS</a>
+										<ul class="gnb_depth2">
+											<li><a href="#">공지사항</a></li>
+											<li><a href="#">A/S Letter</a></li>
+											<li><a href="#">EVENT</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="name_gnb_depth1" href="#;">내차관리</a>
+										<ul class="gnb_depth2">
+											<li><a href="#">내차정보관리</a></li>
+											<li><a href="#">정비예약</a></li>
+											<li><a href="#">정비이력</a></li>
+											<li><a href="#">부품정보</a></li>
+											<li><a href="#">스마트서비스</a></li>
+											<li><a href="#">차계부</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="pr.html"><span>PR센터</span></a>
+								<ul class="gnb_depth1">
+									<li>
+										<a class="name_gnb_depth1" href="#;">회사소식</a>
+										<ul class="gnb_depth2">
+											<li><a href="#">공지사항</a></li>
+											<li><a href="#">보도자료</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="name_gnb_depth1" href="#;">미디어센터</a>
+										<ul class="gnb_depth2">
+											<li><a href="#">TV CF</a></li>
+											<li><a href="#">지면광고</a></li>
+											<li><a href="#">기업홍보영상</a></li>
+											<li><a href="#">BROCHURE</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="name_gnb_depth1" href="#;">이벤트</a>
+										<ul class="gnb_depth2">
+											<li><a href="#">진행중인 이벤트</a></li>
+											<li><a href="#">종료된 이벤트</a></li>
+											<li><a href="#">당첨자 발표</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="name_gnb_depth1" href="#;">매거진</a>
+										<ul class="gnb_depth2">
+											<li><a href="#">웹진</a></li>
+											<li><a href="#">사내보</a></li>
+										</ul>
+									</li>
+									<li>
+										<a class="name_gnb_depth1" href="#;">역사관</a>
+										<ul class="gnb_depth2">
+											<li><a href="#">역사관</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<!-- 서브 주메뉴-->
+						<ul class="page_menu menu_gnb">
+							<li>
+								<a href="index.html"><span>회사소개</span></a>
+							</li>
+							<li>
+								<a href="ir.html"><span>IR</span></a>
+							</li>
+							<li>
+								<a href="employ.html"><span>인재채용</span></a>
+							</li>
+						</ul>
+						<a class="gnb_menu_all gnb_out_point" href="#;">전체메뉴</a>
+					</div>
+					<div class="gnb_bg" aria-hidden="true"></div>
+				</section>
+				<hr />
+			</header>
+			<!-- 본문-->
+			<main role="main">
+				<div class="content_inner">
+					<!-- 주가 & 기업-->
+					<div class="clear">
+						<!--기업정보-->
+						<div class="box_ir_left fl">
+							<div class="box_company_info">
+								<article class="tc">
+									<div class="title_area">
+										<h2 class="title">기업정보</h2>
+										<p class="desc_title">쌍용자동차는 정도 경영을 실천하고 있습니다.</p>
+									</div>
+									<ul class="list_ir_feature" aria-label="기업정보 특징 목록">
+										<li>
+											<a href="#;">
+												<div class="img_area"><img src="img/ir_building.png" alt="" /></div>
+												<strong class="title_item">회사개요</strong>
+											</a>
+										</li>
+										<li>
+											<a href="#;">
+												<div class="img_area"><img src="img/ir_paper.png" alt="" /></div>
+												<strong class="title_item">대표이사 인사말</strong>
+											</a>
+										</li>
+										<li>
+											<a href="#;">
+												<div class="img_area"><img src="img/ir_pyramid.png" alt="" /></div>
+												<strong class="title_item">지배구조</strong>
+											</a>
+										</li>
+									</ul>
+								</article>
+							</div>
+						</div>
+						<!--주가정보-->
+						<div class="box_ir_right fr">
+							<div class="line_content_wrap stock_content">
+								<!-- 주가정보-->
+								<section class="stock_wrap">
+									<h2 class="common_title">주가정보</h2>
+									<p class="desc_feature">
+										쌍용자동차의 주가정보를
+										<br />
+										실시간으로 볼 수 있습니다.
+									</p>
+									<div class="main_stock_wrap clear">
+										<storng class="name_stock fl">쌍용자동차</storng>
+										<div class="main_stock_state fr">
+											<p class="value">
+												<i class="blind">현재 값</i>
+												7,999
+											</p>
+											<p class="state up">
+												<i class="blind">변동상태</i>
+												20
+												<i class="blind">상승</i>
+											</p>
+										</div>
+									</div>
+								</section>
+								<!-- 주가 리스트-->
+								<section class="stock_list_wrap">
+									<h2 class="blind">기타 지수정보</h2>
+									<ul class="list_ir_stock">
+										<li class="clear">
+											<strong class="name_stock fl">
+												<i class="blind">지수명</i>
+												코스피
+											</strong>
+											<div class="date_wrap fr">
+												<em class="date_stock">
+													<i class="blind">현재 값</i>
+													1,961,63
+												</em>
+												<span class="state_stock down">
+													<i class="blind">지수 변동 상태</i>
+													- 17.34
+												</span>
+											</div>
+										</li>
+										<li class="clear">
+											<strong class="name_stock fl">
+												<i class="blind">지수명</i>
+												환율(원/달러)
+											</strong>
+											<div class="date_wrap fr">
+												<em class="date_stock">
+													<i class="blind">현재 값</i>
+													1,125.25
+												</em>
+												<span class="state_stock down">
+													<i class="blind">지수 변동 상태</i>
+													- 5.50
+												</span>
+											</div>
+										</li>
+										<li class="clear">
+											<strong class="name_stock fl">
+												<i class="blind">지수명</i>
+												Dow
+											</strong>
+											<div class="date_wrap fr">
+												<em class="date_stock">
+													<i class="blind">현재 값</i>
+													999,999
+												</em>
+												<span class="state_stock down">
+													<i class="blind">지수 변동 상태</i>
+													- 5.22
+												</span>
+											</div>
+										</li>
+										<li class="clear">
+											<strong class="name_stock fl">
+												<i class="blind">지수명</i>
+												Nasdaq
+											</strong>
+											<div class="date_wrap fr">
+												<em class="date_stock">
+													<i class="blind">현재 값</i>
+													999,999
+												</em>
+												<span class="state_stock up">
+													<i class="blind">지수 변동 상태</i>
+													+ 2.36
+												</span>
+											</div>
+										</li>
+									</ul>
+								</section>
+								<a class="baisc_more" href="#;">
+									<span>더보기</span>
+									<i class="xi-angle-right" aria-hidden="true"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- 재무 & 공시-->
+					<div class="clear">
+						<!-- 재무정보-->
+						<div class="box_ir_left fl">
+							<a class="line_content_wrap item_finance hover" href="#;">
+								<article class="item_wrap">
+									<h2 class="common_title">재무정보</h2>
+									<p class="desc_feature">
+										투명하고 효율적인 선진경영!
+										<br />
+										쌍용자동차가 함께 이끌어 갑니다.
+									</p>
+								</article>
+							</a>
+						</div>
+						<div class="box_ir_right fr">
+							<a class="line_content_wrap item_data hover" href="#;">
+								<article class="item_wrap">
+									<h2 class="common_title">공시자료</h2>
+									<p class="desc_feature">
+										금융감독원의 전자공시시스템
+										<br />
+										공시자료로 이동 가능합니다.
+									</p>
+								</article>
+							</a>
+						</div>
+					</div>
+					<!-- 활동, 자료실-->
+					<div class="clear">
+						<!-- 활동-->
+						<div class="box_ir_left fl">
+							<div class="line_content_wrap">
+								<article class="item_wrap"><h2 class="common_title">IR활동</h2></article>
+								<ul class="list_button_content">
+									<li>
+										<span class="text">
+											<i class="blind">작성일</i>
+											[2016.06.23]
+											<i class="blind">내용</i>
+											미래에셋 대우 Corporate Day
+										</span>
+										<div class="btn_wrap"><a class="btn_ir" href="#;">관련파일보기</a></div>
+									</li>
+									<li>
+										<span class="text">
+											<i class="blind">작성일</i>
+											[2016.06.23]
+											<i class="blind">내용</i>
+											미래에셋 대우 Corporate Day
+										</span>
+										<div class="btn_wrap"><a class="btn_ir" href="#;">관련파일보기</a></div>
+									</li>
+									<li>
+										<span class="text">
+											<i class="blind">작성일</i>
+											[2016.06.23]
+											<i class="blind">내용</i>
+											미래에셋 대우 Corporate Day
+										</span>
+										<div class="btn_wrap"><a class="btn_ir" href="#;">관련파일보기</a></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- 자료실-->
+						<div class="box_ir_right fr">
+							<a class="line_content_wrap item_ir_data hover" href="#;" style="height:198px">
+								<article class="item_wrap">
+									<h2 class="common_title">IR자료실</h2>
+									<p class="desc_feature">판매 및 경영실적 등의 자료를 볼 수 있습니다.</p>
+								</article>
+							</a>
+						</div>
+					</div>
+				</div>
+			</main>
+			<!-- 하단-->
+			<footer id="footer" role="contentinfo">
+				<section class="footer_inner">
+					<h3 class="blind">사이트 정보 메뉴</h3>
+					<ul class="list_footer_menu">
+						<li><a href="#;">고객센터 080-500-5582</a></li>
+						<li><a class="point" href="#;">개인정보처리방침</a></li>
+						<li><a href="#;">이메일 무단수집거부</a></li>
+						<li><a href="#;">전체메뉴보기</a></li>
+						<li><a href="#;">사이버감사실</a></li>
+						<li>
+							<a href="#;"><b>GLOBAL</b></a>
+						</li>
+						<li>
+							<a href="#;"><b>영상정보처리기기 운영,관리 방침</b></a>
+						</li>
+						<li>
+							<ul class="list_footer_sns">
+								<li>
+									<a class="ico_twitter" href="#;"><span class="blind">쌍용자동차 트위터 바로가기</span></a>
+								</li>
+								<li>
+									<a class="ico_facebook" href="#;"><span class="blind">쌍용자동차 페이스북 바로가기</span></a>
+								</li>
+								<li>
+									<a class="ico_blog" href="#;"><span class="blind">쌍용자동차 블로그 바로가기</span></a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<address class="copy">COPYRIGHT 2011 SSANGYONG COMPANY. ALL RESERVED.</address>
+				</section>
+				<hr />
+			</footer>
+			<div class="gnb_dimmed" aria-hidden="true"></div>
+			<script src="js/jquery.js"></script>
+			<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+			<!-- script-->
+			<script src="js/common.js"></script>
+			<script src="js/sub.js"></script>
+		</div>
+	</body>
+</html>

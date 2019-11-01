@@ -21,21 +21,6 @@
 		}
 	}
 
-	// 클릭 가능한 요소일 경우
-	a.box_employ,
-	a.line_content_wrap {
-		&:hover,
-		&:focus {
-			.common_title {
-				color: #fff;
-			}
-
-			.desc_feature {
-				color: #8598b2;
-			}
-		}
-	}
-
 	// 라인 타입
 	.line_box {
 		border: 1px solid #c9d1d7;
@@ -45,11 +30,6 @@
 
 	// 배경있는 전체타입 컨텐츠
 	[class*=bg_] {
-		&:hover,
-		&:focus {
-			background-color: #354862;
-		}
-
 		&:before {
 			position: absolute;
 			content: '';
