@@ -8,7 +8,7 @@
 	.item_feature {
 		float: left;
 		width: 290px;
-		border: 1px solid #c8cfd9;
+		border: 1px solid $line_soft_gray;
 		box-sizing: border-box;
 
 		& + .item_feature {
@@ -64,7 +64,7 @@
 		display: block;
 		padding: 13px 19px 14px;
 		background-color: #fafafa;
-		border-top: 1px solid #c8cfd9;
+		border-top: 1px solid $line_soft_gray;
 
 		&:before {
 			@include sp_common($common-arw_right_9x17);
@@ -106,7 +106,7 @@
 			position: relative;
 			height: 305px;
 			padding: 20px;
-			border-bottom: 1px solid #c8cfd9;
+			border-bottom: 1px solid $line_soft_gray;
 		}
 
 		& + .line_content_wrap {
@@ -163,7 +163,7 @@
 
 			// 브로슈어
 			&.info_bg_magazin {
-				border-bottom: 1px solid #c8cfd9;
+				border-bottom: 1px solid $line_soft_gray;
 
 				&:before {
 					@include sp_company_size($company-magazin);
@@ -175,7 +175,7 @@
 			
 			// 미한드라
 			&.info_bg_mihan {
-				border-bottom: 1px solid #c8cfd9;
+				border-bottom: 1px solid $line_soft_gray;
 
 				&:before {
 					@include sp_company_size($company-mahindra);

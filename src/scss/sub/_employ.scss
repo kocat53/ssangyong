@@ -159,7 +159,7 @@
 			vertical-align: middle;
 			width: 66px;
 			height: 66px;
-			background-color: #344763;
+			background-color: $navy;
 			color: #fff;
 			text-align: center;
 			border-radius: 50%;
@@ -219,7 +219,7 @@
 
 		&:hover,
 		&:focus {
-			color: #344763;
+			color: $navy;
 		}
 
 		&.xi-angle-left {
@@ -321,12 +321,12 @@
 				width: 200px;
 				height: 114px;
 				padding: 20px 15px; 
-				background-color: #f5f5f5;
+				background-color: $base_gray;
 				box-sizing: border-box;
 
 				&:hover,
 				&:focus {
-					background-color: $mainblue;
+					background-color: $navy;
 
 					.name_skil {
 						color: #fff;

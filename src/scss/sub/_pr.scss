@@ -43,7 +43,7 @@
 				right: -100%;
 				left: -100%;
 				height: 1px;
-				background-color: #c8cfd9;
+				background-color: $line_soft_gray;
 				content: '';
 			}
 		}
@@ -133,10 +133,10 @@
 		text-align: center;
 		box-sizing: border-box;
 		background-repeat: no-repeat;
-		border-bottom: 1px solid #c8cfd9;
+		border-bottom: 1px solid $line_soft_gray;
 	
 		+ .item_pr_box {
-			border-left: 1px solid #c8cfd9;
+			border-left: 1px solid $line_soft_gray;
 		}
 		
 		// 4면이 라인인 타입
@@ -144,7 +144,7 @@
 			width: 190px;
 			height: 220px;
 			padding: 15px 0;
-			border: 1px solid #c8cfd9;
+			border: 1px solid $line_soft_gray;
 		}
 
 		&:hover,
@@ -185,7 +185,7 @@
 			display: block;
 			margin-bottom: 5px;
 			font-size: 18px;
-			color: #344763;
+			color: $navy;
 		}
 
 		.sub_title {
@@ -228,7 +228,7 @@
 
 	&:hover,
 	&:focus {
-		background-color: #344763;
+		background-color: $navy;
 
 		.common_title {
 			color: #fff;
