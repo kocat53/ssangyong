@@ -61,6 +61,26 @@ table {
 	table-layout: fixed;
 }
 
+::-moz-selection {
+	background: #4a63c6;
+	color: #FFF;
+}
+
+::selection {
+	background: #4a63c6;
+	color: #FFF;
+}
+
+::-moz-selection {
+	background: #4a63c6;
+	color: #FFF;
+}
+
+::-webkit-selection {
+	background: #4a63c6;
+	color: #FFF;
+}
+
 #skip a {
 	position: absolute;
 	top: -50px;

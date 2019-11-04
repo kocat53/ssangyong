@@ -1,0 +1,57 @@
+extends ./template/layout
+
+block content
+   h2.blind 구매정보 컨텐츠 영역 시작
+   .purchase_wrap.clear
+      // 왼쪽 컨텐츠 영역
+      .fl(style="width: 610px;")
+         // 구매 혜택
+         article.setcion_purchase
+            h3.title.ico_coin 이달의 구매 혜택
+            .box_item.item_list
+               strong.blind 구매헤택 목록
+               ul.list_dot
+                  -for(dot=0;dot<3;dot++)
+                     li
+                        a(href="#;") 일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십
+            hr
+         // 사이버 전시장
+         article.setcion_purchase
+            h3.title.ico_car 사이버전시장
+            .box_item.line_content_wrap
+               ul.list_multiple_content
+                  -
+                     var exbTitle = {
+                        title: ['온라인 견적','시승예약','카탈로그신청'],
+                        subTitle : ['On-line Estimates','Test-Drive','Home Delivery'],
+                        addClass: ['img_book','img_calendar','img_catalog']
+                     }
+                  -for(var eb=0; eb<exbTitle.title.length;eb++)
+                     li.item
+                        a(href="#;" class=`hover ${exbTitle.addClass[eb]}`)
+                           strong.common_title!=exbTitle.title[eb]
+                           p.sub_title!=exbTitle.subTitle[eb]
+            hr
+         // 전시장&매니저
+         article.setcion_purchase
+         // 구매정보 퀵메뉴
+         article.setcion_purchase
+            h2.blind 구매정보 퀵메뉴
+            ul.list_table_content
+               -
+                  var quick = {
+                     name : ['차량정보','구매절차','할부정보','세금정보','보험안내','장애인구매','등록안내','유의사항'],
+                     ico :['ico_car','ico_purch','ico_card','ico_graph','ico_file_group','ico_dp','ico_info','ico_light']
+                  }
+               -for(qi=0;qi<quick.name.length;qi++)
+                  li
+                     a(href="#")
+                        span(class=`name_item ${quick.ico[qi]}`)!= quick.name[qi]
+
+            
+      // 오른쪽 컨텐츠 영역
+      .fr(style="width: 290px")
+         // 사이버 전시장
+         article.setcion_purchase
+            h3.title.ico_tablet  다운로드센터
+               .box_item.line_content_wrap

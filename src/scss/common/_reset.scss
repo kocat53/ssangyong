@@ -62,6 +62,21 @@ table {
 	table-layout: fixed;
 }
 
+::selection {
+    background:$softblue;
+    color: #FFF;
+}
+
+::-moz-selection {
+    background:$softblue;
+    color: #FFF;
+}
+
+::-webkit-selection {
+    background:$softblue;
+    color: #FFF;
+}
+
 #skip {
 	a {
 		position: absolute;

@@ -8,9 +8,11 @@
 @import 'lib/sp_common';
 @import 'lib/sp_company';
 @import 'lib/sp_employ';
+@import 'lib/sp_purchase';
 
-// 회사소개
+// 서브컨텐츠
 @import 'sub/_company';
 @import 'sub/_employ';
 @import 'sub/_pr';
 @import 'sub/_ir';
+@import 'sub/_purchase';

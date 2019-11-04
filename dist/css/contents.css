@@ -714,7 +714,7 @@
 	color: #344763;
 }
 
-.wrap_pr_item .item_pr_box .sub_title {
+.sub_title {
 	font-size: 12px;
 	color: #668dc6;
 }
@@ -946,5 +946,314 @@
 	color: #fff;
 	background-color: #4b6388;
 	border-color: #4b6388;
+}
+
+.setcion_purchase > .title {
+	display: block;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 600;
+	color: #3f75c3;
+	letter-spacing: -0.5px;
+}
+
+.setcion_purchase > .title:before {
+	background-image: url(../img/sp_purchase.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	content: '';
+}
+
+.setcion_purchase > .title.ico_coin:before {
+	width: 34px;
+	height: 29px;
+	background-position: -191px -128px;
+	margin-top: -2px;
+	margin-right: 5px;
+}
+
+.setcion_purchase > .title.ico_car:before {
+	width: 47px;
+	height: 32px;
+	background-position: -390px -101px;
+	margin-top: -5px;
+}
+
+.setcion_purchase > .title.ico_tablet:before {
+	width: 34px;
+	height: 33px;
+	background-position: -390px -143px;
+	margin-top: -7px;
+}
+
+.setcion_purchase > .title + .box_item {
+	margin-top: 10px;
+}
+
+.setcion_purchase + .setcion_purchase {
+	margin-top: 15px;
+}
+
+.box_item.item_list {
+	position: relative;
+	border: 1px solid #c8cfd9;
+	padding: 30px 30px 30px 250px;
+}
+
+.box_item.item_list:before {
+	background-image: url(../img/sp_purchase.png);
+	width: 181px;
+	height: 103px;
+	background-position: 0px 0px;
+	position: absolute;
+	top: 50%;
+	margin-top: -52px;
+	left: 33px;
+	content: '';
+}
+
+.list_dot > li {
+	line-height: 1.45;
+}
+
+.list_dot > li + li {
+	margin-top: 5px;
+}
+
+.list_dot > li > a {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	position: relative;
+	display: block;
+	padding-left: 15px;
+}
+
+.list_dot > li > a:before {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 3px;
+	height: 3px;
+	margin-top: -1px;
+	background-color: #95a6b2;
+	border-radius: 50%;
+	content: '';
+}
+
+.list_dot > li > a:hover, .list_dot > li > a:focus {
+	color: #111;
+	text-decoration: underline;
+}
+
+.list_multiple_content {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.list_multiple_content > .item {
+	display: table-cell;
+	vertical-align: middle;
+	border-bottom: 1px solid #c8cfd9;
+	text-align: center;
+}
+
+.list_multiple_content > .item > a {
+	position: relative;
+	display: block;
+	height: 198px;
+	padding: 25px 0;
+	box-sizing: border-box;
+}
+
+.list_multiple_content > .item > a:before {
+	background-image: url(../img/sp_purchase.png);
+	position: absolute;
+	content: '';
+}
+
+.list_multiple_content > .item > a.img_book:before {
+	width: 135px;
+	height: 91px;
+	background-position: -316px 0px;
+	left: 37px;
+	bottom: 20px;
+}
+
+.list_multiple_content > .item > a.img_calendar:before {
+	width: 155px;
+	height: 71px;
+	background-position: 0px -237px;
+	left: 24px;
+	bottom: 35px;
+}
+
+.list_multiple_content > .item > a.img_catalog:before {
+	width: 128px;
+	height: 114px;
+	background-position: 0px -113px;
+	left: 30px;
+	bottom: 5px;
+}
+
+.list_multiple_content > .item + .item {
+	border-left: 1px solid #c8cfd9;
+}
+
+.list_multiple_content > .item .common_title {
+	display: block;
+	font-size: 18px;
+	color: #344763;
+	margin-bottom: 3px;
+}
+
+.list_table_content > li {
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+
+.list_table_content > li > a {
+	position: relative;
+	display: block;
+	height: 44px;
+	padding: 11px 0 0;
+	font-size: 13px;
+	font-weight: 600;
+	color: #6d7a8d;
+	box-sizing: border-box;
+}
+
+.list_table_content > li > a:hover, .list_table_content > li > a:focus {
+	color: #fff;
+	background-color: #344763;
+}
+
+.list_table_content > li > a:hover:after, .list_table_content > li > a:focus:after {
+	border-color: #344763;
+}
+
+.list_table_content > li > a:hover .ico_car:before, .list_table_content > li > a:focus .ico_car:before {
+	width: 24px;
+	height: 24px;
+	background-position: -138px -113px;
+}
+
+.list_table_content > li > a:hover .ico_purch:before, .list_table_content > li > a:focus .ico_purch:before {
+	width: 26px;
+	height: 18px;
+	background-position: -328px -237px;
+}
+
+.list_table_content > li > a:hover .ico_card:before, .list_table_content > li > a:focus .ico_card:before {
+	width: 28px;
+	height: 21px;
+	background-position: -360px -199px;
+}
+
+.list_table_content > li > a:hover .ico_graph:before, .list_table_content > li > a:focus .ico_graph:before {
+	width: 28px;
+	height: 24px;
+	background-position: -273px -128px;
+}
+
+.list_table_content > li > a:hover .ico_file_group:before, .list_table_content > li > a:focus .ico_file_group:before {
+	width: 20px;
+	height: 22px;
+	background-position: -165px -284px;
+}
+
+.list_table_content > li > a:hover .ico_dp:before, .list_table_content > li > a:focus .ico_dp:before {
+	width: 20px;
+	height: 24px;
+	background-position: -138px -147px;
+}
+
+.list_table_content > li > a:hover .ico_info:before, .list_table_content > li > a:focus .ico_info:before {
+	width: 22px;
+	height: 22px;
+	background-position: -223px -204px;
+}
+
+.list_table_content > li > a:hover .ico_light:before, .list_table_content > li > a:focus .ico_light:before {
+	width: 24px;
+	height: 27px;
+	background-position: -225px -167px;
+}
+
+.list_table_content > li > a:after {
+	position: absolute;
+	top: -1px;
+	right: 0;
+	left: -1px;
+	bottom: 0;
+	border: 1px solid #c8cfd9;
+	content: '';
+}
+
+.list_table_content .name_item {
+	position: relative;
+	display: inline-block;
+}
+
+.list_table_content .name_item:before {
+	background-image: url(../img/sp_purchase.png);
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	content: '';
+}
+
+.list_table_content .name_item.ico_car:before {
+	width: 24px;
+	height: 24px;
+	background-position: -259px -167px;
+}
+
+.list_table_content .name_item.ico_purch:before {
+	width: 26px;
+	height: 18px;
+	background-position: -255px -204px;
+	margin-top: -1px;
+}
+
+.list_table_content .name_item.ico_card:before {
+	width: 28px;
+	height: 21px;
+	background-position: -398px -199px;
+}
+
+.list_table_content .name_item.ico_graph:before {
+	width: 28px;
+	height: 24px;
+	background-position: -235px -128px;
+}
+
+.list_table_content .name_item.ico_file_group:before {
+	width: 20px;
+	height: 22px;
+	background-position: -195px -284px;
+}
+
+.list_table_content .name_item.ico_dp:before {
+	width: 20px;
+	height: 24px;
+	background-position: -138px -181px;
+}
+
+.list_table_content .name_item.ico_info:before {
+	width: 22px;
+	height: 22px;
+	background-position: -191px -204px;
+}
+
+.list_table_content .name_item.ico_light:before {
+	width: 24px;
+	height: 27px;
+	background-position: -191px -167px;
+	margin-top: -3px;
+	margin-right: 8px;
 }
 /*# sourceMappingURL=contents.css.map */
