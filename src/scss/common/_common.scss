@@ -15,6 +15,22 @@
 	display: block;
 }
 
+.table_layout {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+
+	.table_middle {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.table_top {
+		display: table-cell;
+		vertical-align: top;
+	}
+}
+
 // 공통 타이틀
 .common_title {
 	color: #1B375B;
@@ -77,5 +93,21 @@
 		.desc_feature {
 			color: #8598b2 !important;
 		}
+	}
+}
+
+.btn {
+	display: inline-block;
+	padding: 7px  19px;
+	border: 1px solid $navy;
+	background-color: #fff;
+	font-size: 13px;
+	font-weight: 600;
+	color: #4b6388;
+
+	&:hover,
+	&:focus {
+		background-color: $navy;
+		color: #fff;
 	}
 }

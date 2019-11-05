@@ -147,6 +147,22 @@ table {
 	display: block;
 }
 
+.table_layout {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.table_layout .table_middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.table_layout .table_top {
+	display: table-cell;
+	vertical-align: top;
+}
+
 .common_title {
 	color: #1B375B;
 	font-size: 20px;
@@ -199,6 +215,21 @@ table {
 
 .hover:hover .desc_feature, .hover:focus .desc_feature {
 	color: #8598b2 !important;
+}
+
+.btn {
+	display: inline-block;
+	padding: 7px  19px;
+	border: 1px solid #344763;
+	background-color: #fff;
+	font-size: 13px;
+	font-weight: 600;
+	color: #4b6388;
+}
+
+.btn:hover, .btn:focus {
+	background-color: #344763;
+	color: #fff;
 }
 
 #header {
@@ -648,4 +679,3 @@ table {
 .copy {
 	font-size: 10px;
 }
-/*# sourceMappingURL=common.css.map */

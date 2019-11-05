@@ -7,13 +7,14 @@ block content
       .fl(style="width: 610px;")
          // 구매 혜택
          article.setcion_purchase
-            h3.title.ico_coin 이달의 구매 혜택
+            h3.title.ico_coin 이달의 구매혜택
             .box_item.item_list
                strong.blind 구매헤택 목록
                ul.list_dot
                   -for(dot=0;dot<3;dot++)
                      li
-                        a(href="#;") 일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십
+                        span.item_text 일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십
+               +btnMore
             hr
          // 사이버 전시장
          article.setcion_purchase
@@ -31,9 +32,108 @@ block content
                         a(href="#;" class=`hover ${exbTitle.addClass[eb]}`)
                            strong.common_title!=exbTitle.title[eb]
                            p.sub_title!=exbTitle.subTitle[eb]
+               p.desc_small(style="margin-top: 7px") ※ 카탈로그는 우측 다운로드센터에서 보다 빠르고 편리하게 이용하실 수 있습니다.  
             hr
          // 전시장&매니저
-         article.setcion_purchase
+         article.setcion_purchase.line_content_wrap
+            section.search_shop_wrap.on
+               h2(role='button').title 판매전시장
+               .serach_shop_box
+                  // 지역검색
+                  .search_section.pr
+                     .table_layout.pr
+                        //-  타이틀
+                        strong.title_saerch.table_middle 지역검색
+                        // 검색 폼
+                        .form_saerch.table_middle
+                           .inner 
+                              .search_wrap.type_select(tabIndex="0")
+                                 span.name_val 광역시/도
+                                 ul.list_select
+                                    -for(sl=0;sl<6;sl++)
+                                       li
+                                          button.item_select!=`서울 특별시 ${sl}`
+                        .form_saerch.table_middle
+                           .inner 
+                              .search_wrap.type_select(tabIndex="0")
+                                 span.name_val 시/군/구
+                                 ul.list_select
+                                    -for(sl=0;sl<6;sl++)
+                                       li
+                                          button.item_select!=`시군구 ${sl}`
+                     //- 검색 버튼
+                     .btn_group
+                        button.btn_search
+                           i(aria-hidden="true").xi-search
+                           span.blind 검색
+                  // 명칭검색
+                  .search_section.pr
+                     .table_layout.pr
+                        //-  타이틀
+                        strong.title_saerch.table_middle 명칭검색
+                        // 검색 폼
+                        .form_saerch.table_middle
+                           .inner 
+                              .search_wrap
+                                 input(type="text" placeholder="검색어를 입력하세요.")
+                     //- 검색 버튼
+                     .btn_group
+                        button.btn_search
+                           i(aria-hidden="true").xi-search
+                           span.blind 검색
+            section.search_shop_wrap
+               h2(role='button').title 오토매니저
+               .serach_shop_box
+                  // 지역검색
+                  .search_section.pr
+                     .table_layout.pr
+                        //-  타이틀
+                        strong.title_saerch.table_middle 근무지 검색
+                        // 검색 폼
+                        .form_saerch.table_middle
+                           .inner 
+                              .search_wrap.type_select(tabIndex="0")
+                                 span.name_val 광역시/도
+                                 ul.list_select
+                                    -for(sl=0;sl<6;sl++)
+                                       li
+                                          button.item_select!=`서울 특별시 ${sl}`
+                        .form_saerch.table_middle
+                           .inner 
+                              .search_wrap.type_select(tabIndex="0")
+                                 span.name_val 시/군/구
+                                 ul.list_select
+                                    -for(sl=0;sl<6;sl++)
+                                       li
+                                          button.item_select!=`시군구 ${sl}`
+                        .form_saerch.table_middle
+                           .inner 
+                              .search_wrap.type_select(tabIndex="0")
+                                 span.name_val 전시장
+                                 ul.list_select
+                                    -for(sl=0;sl<6;sl++)
+                                       li
+                                          button.item_select!=`전시장 ${sl}`
+                     //- 검색 버튼
+                     .btn_group
+                        button.btn_search
+                           i(aria-hidden="true").xi-search
+                           span.blind 검색
+                  // 명칭검색
+                  .search_section.pr
+                     .table_layout.pr
+                        //-  타이틀
+                        strong.title_saerch.table_middle 성명검색
+                        // 검색 폼
+                        .form_saerch.table_middle
+                           .inner 
+                              .search_wrap
+                                 input(type="text" placeholder="검색어를 입력하세요.")
+                     //- 검색 버튼
+                     .btn_group
+                        button.btn_search
+                           i(aria-hidden="true").xi-search
+                           span.blind 검색
          // 구매정보 퀵메뉴
          article.setcion_purchase
             h2.blind 구매정보 퀵메뉴
@@ -47,11 +147,33 @@ block content
                   li
                      a(href="#")
                         span(class=`name_item ${quick.ico[qi]}`)!= quick.name[qi]
-
-            
+            hr
       // 오른쪽 컨텐츠 영역
       .fr(style="width: 290px")
          // 사이버 전시장
          article.setcion_purchase
             h3.title.ico_tablet  다운로드센터
-               .box_item.line_content_wrap
+            .box_item.line_content_wrap
+               ul.list_down
+                  li
+                     a(href="#;").item  RV 종합가격표   
+                  li
+                     a(href="#;").item  체어맨 W 가격표
+                  li.down_carPdf
+                     .swiper-container
+                        .swiper-wrapper
+                           -for(n=0;n<=3;n++)
+                              .swiper-slide(data-link=`ctg_link${n}`)
+                                 img(src="../img/pur_car1.jpg", alt=`자동차${n}`)
+                     .dot
+                     button(type="button").btn_arrow.xi-angle-right
+                        span.blind 다음
+                     button(type="button").btn_arrow.xi-angle-left
+                        span.blind 이전
+                     a(href="javascript:alert('ctg_link0')").btn.down_catalog 카탈로그 보기
+            // 티볼리 아트웍스
+            .box_item.line_content_wrap
+               .item_wrap.box_artworks
+                  +title('티볼리 아트웍스','쌍용자동차 브랜드 컬렉션<br>온라인쇼핑몰입니다.')
+                  .go_mall
+                     a(href="#;").btn 쇼핑몰 바로가기

@@ -2,41 +2,42 @@
 
 // how to use : Use following mixins.
 // variable : [X-axis] [Y-axis] [offset_x] [offset_y] [width] [height] [total_width] [total_height] [image_url] [image_name] [folder_name]
-$purchase-book: 316px 0px -316px 0px 135px 91px 451px 308px '../img/sp_purchase.png' 'purchase-book' 'sp_purchase';
-$purchase-calendar: 0px 237px 0px -237px 155px 71px 451px 308px '../img/sp_purchase.png' 'purchase-calendar' 'sp_purchase';
-$purchase-car_map: 390px 101px -390px -101px 47px 32px 451px 308px '../img/sp_purchase.png' 'purchase-car_map' 'sp_purchase';
-$purchase-catalog: 0px 113px 0px -113px 128px 114px 451px 308px '../img/sp_purchase.png' 'purchase-catalog' 'sp_purchase';
-$purchase-coin_group: 191px 128px -191px -128px 34px 29px 451px 308px '../img/sp_purchase.png' 'purchase-coin_group' 'sp_purchase';
-$purchase-down_file: 316px 199px -316px -199px 34px 22px 451px 308px '../img/sp_purchase.png' 'purchase-down_file' 'sp_purchase';
-$purchase-gold_coin: 0px 0px 0px 0px 181px 103px 451px 308px '../img/sp_purchase.png' 'purchase-gold_coin' 'sp_purchase';
-$purchase-ico_card: 398px 199px -398px -199px 28px 21px 451px 308px '../img/sp_purchase.png' 'purchase-ico_card' 'sp_purchase';
-$purchase-ico_card_on: 360px 199px -360px -199px 28px 21px 451px 308px '../img/sp_purchase.png' 'purchase-ico_card_on' 'sp_purchase';
-$purchase-ico_dp: 138px 181px -138px -181px 20px 24px 451px 308px '../img/sp_purchase.png' 'purchase-ico_dp' 'sp_purchase';
-$purchase-ico_dp_on: 138px 147px -138px -147px 20px 24px 451px 308px '../img/sp_purchase.png' 'purchase-ico_dp_on' 'sp_purchase';
-$purchase-ico_file: 195px 284px -195px -284px 20px 22px 451px 308px '../img/sp_purchase.png' 'purchase-ico_file' 'sp_purchase';
-$purchase-ico_file_on: 165px 284px -165px -284px 20px 22px 451px 308px '../img/sp_purchase.png' 'purchase-ico_file_on' 'sp_purchase';
-$purchase-ico_handle: 259px 167px -259px -167px 24px 24px 451px 308px '../img/sp_purchase.png' 'purchase-ico_handle' 'sp_purchase';
-$purchase-ico_handle_on: 138px 113px -138px -113px 24px 24px 451px 308px '../img/sp_purchase.png' 'purchase-ico_handle_on' 'sp_purchase';
-$purchase-ico_info: 191px 204px -191px -204px 22px 22px 451px 308px '../img/sp_purchase.png' 'purchase-ico_info' 'sp_purchase';
-$purchase-ico_info_on: 223px 204px -223px -204px 22px 22px 451px 308px '../img/sp_purchase.png' 'purchase-ico_info_on' 'sp_purchase';
-$purchase-ico_light: 191px 167px -191px -167px 24px 27px 451px 308px '../img/sp_purchase.png' 'purchase-ico_light' 'sp_purchase';
-$purchase-ico_light_on: 225px 167px -225px -167px 24px 27px 451px 308px '../img/sp_purchase.png' 'purchase-ico_light_on' 'sp_purchase';
-$purchase-ico_random: 255px 204px -255px -204px 26px 18px 451px 308px '../img/sp_purchase.png' 'purchase-ico_random' 'sp_purchase';
-$purchase-ico_random_on: 328px 237px -328px -237px 26px 18px 451px 308px '../img/sp_purchase.png' 'purchase-ico_random_on' 'sp_purchase';
-$purchase-ico_round_graph: 235px 128px -235px -128px 28px 24px 451px 308px '../img/sp_purchase.png' 'purchase-ico_round_graph' 'sp_purchase';
-$purchase-ico_round_graph_on: 273px 128px -273px -128px 28px 24px 451px 308px '../img/sp_purchase.png' 'purchase-ico_round_graph_on' 'sp_purchase';
-$purchase-img_keyling: 191px 0px -191px 0px 115px 118px 451px 308px '../img/sp_purchase.png' 'purchase-img_keyling' 'sp_purchase';
-$purchase-label_artworks: 316px 101px -316px -101px 64px 88px 451px 308px '../img/sp_purchase.png' 'purchase-label_artworks' 'sp_purchase';
-$purchase-tablet: 390px 143px -390px -143px 34px 33px 451px 308px '../img/sp_purchase.png' 'purchase-tablet' 'sp_purchase';
-$purchase-text_brand: 165px 237px -165px -237px 153px 37px 451px 308px '../img/sp_purchase.png' 'purchase-text_brand' 'sp_purchase';
+$purchase-book: 191px 0px -191px 0px 135px 91px 400px 342px '../img/sp_purchase.png' 'purchase-book' 'sp_purchase';
+$purchase-calendar: 0px 237px 0px -237px 155px 71px 400px 342px '../img/sp_purchase.png' 'purchase-calendar' 'sp_purchase';
+$purchase-car_map: 336px 148px -336px -148px 47px 32px 400px 342px '../img/sp_purchase.png' 'purchase-car_map' 'sp_purchase';
+$purchase-catalog: 0px 113px 0px -113px 128px 114px 400px 342px '../img/sp_purchase.png' 'purchase-catalog' 'sp_purchase';
+$purchase-coin_group: 336px 233px -336px -233px 34px 29px 400px 342px '../img/sp_purchase.png' 'purchase-coin_group' 'sp_purchase';
+$purchase-down_file: 336px 272px -336px -272px 34px 22px 400px 342px '../img/sp_purchase.png' 'purchase-down_file' 'sp_purchase';
+$purchase-gold_coin: 0px 0px 0px 0px 181px 103px 400px 342px '../img/sp_purchase.png' 'purchase-gold_coin' 'sp_purchase';
+$purchase-ico_card: 138px 181px -138px -181px 28px 21px 400px 342px '../img/sp_purchase.png' 'purchase-ico_card' 'sp_purchase';
+$purchase-ico_card_on: 138px 150px -138px -150px 28px 21px 400px 342px '../img/sp_purchase.png' 'purchase-ico_card_on' 'sp_purchase';
+$purchase-ico_down: 336px 98px -336px -98px 48px 40px 400px 342px '../img/sp_purchase.png' 'purchase-ico_down' 'sp_purchase';
+$purchase-ico_dp: 380px 233px -380px -233px 20px 24px 400px 342px '../img/sp_purchase.png' 'purchase-ico_dp' 'sp_purchase';
+$purchase-ico_dp_on: 380px 190px -380px -190px 20px 24px 400px 342px '../img/sp_purchase.png' 'purchase-ico_dp_on' 'sp_purchase';
+$purchase-ico_file: 132px 318px -132px -318px 20px 22px 400px 342px '../img/sp_purchase.png' 'purchase-ico_file' 'sp_purchase';
+$purchase-ico_file_on: 380px 272px -380px -272px 20px 22px 400px 342px '../img/sp_purchase.png' 'purchase-ico_file_on' 'sp_purchase';
+$purchase-ico_handle: 0px 318px 0px -318px 24px 24px 400px 342px '../img/sp_purchase.png' 'purchase-ico_handle' 'sp_purchase';
+$purchase-ico_handle_on: 34px 318px -34px -318px 24px 24px 400px 342px '../img/sp_purchase.png' 'purchase-ico_handle_on' 'sp_purchase';
+$purchase-ico_info: 68px 318px -68px -318px 22px 22px 400px 342px '../img/sp_purchase.png' 'purchase-ico_info' 'sp_purchase';
+$purchase-ico_info_on: 100px 318px -100px -318px 22px 22px 400px 342px '../img/sp_purchase.png' 'purchase-ico_info_on' 'sp_purchase';
+$purchase-ico_light: 298px 169px -298px -169px 24px 27px 400px 342px '../img/sp_purchase.png' 'purchase-ico_light' 'sp_purchase';
+$purchase-ico_light_on: 138px 113px -138px -113px 24px 27px 400px 342px '../img/sp_purchase.png' 'purchase-ico_light_on' 'sp_purchase';
+$purchase-ico_random: 191px 208px -191px -208px 26px 18px 400px 342px '../img/sp_purchase.png' 'purchase-ico_random' 'sp_purchase';
+$purchase-ico_random_on: 227px 208px -227px -208px 26px 18px 400px 342px '../img/sp_purchase.png' 'purchase-ico_random_on' 'sp_purchase';
+$purchase-ico_round_graph: 298px 101px -298px -101px 28px 24px 400px 342px '../img/sp_purchase.png' 'purchase-ico_round_graph' 'sp_purchase';
+$purchase-ico_round_graph_on: 298px 135px -298px -135px 28px 24px 400px 342px '../img/sp_purchase.png' 'purchase-ico_round_graph_on' 'sp_purchase';
+$purchase-img_keyling: 191px 101px -191px -101px 97px 97px 400px 342px '../img/sp_purchase.png' 'purchase-img_keyling' 'sp_purchase';
+$purchase-label_artworks: 336px 0px -336px 0px 64px 88px 400px 342px '../img/sp_purchase.png' 'purchase-label_artworks' 'sp_purchase';
+$purchase-tablet: 336px 190px -336px -190px 34px 33px 400px 342px '../img/sp_purchase.png' 'purchase-tablet' 'sp_purchase';
+$purchase-text_brand: 165px 237px -165px -237px 153px 53px 400px 342px '../img/sp_purchase.png' 'purchase-text_brand' 'sp_purchase';
 
 //ancestor
-$sp_purchase-width: 451px;
-$sp_purchase-height: 308px;
+$sp_purchase-width: 400px;
+$sp_purchase-height: 342px;
 $sp_purchase-image: '../img/sp_purchase.png';
-$sp_purchase-sprites: ($purchase-book, $purchase-calendar, $purchase-car_map, $purchase-catalog, $purchase-coin_group, $purchase-down_file, $purchase-gold_coin, $purchase-ico_card, $purchase-ico_card_on, $purchase-ico_dp, $purchase-ico_dp_on, $purchase-ico_file, $purchase-ico_file_on, $purchase-ico_handle, $purchase-ico_handle_on, $purchase-ico_info, $purchase-ico_info_on, $purchase-ico_light, $purchase-ico_light_on, $purchase-ico_random, $purchase-ico_random_on, $purchase-ico_round_graph, $purchase-ico_round_graph_on, $purchase-img_keyling, $purchase-label_artworks, $purchase-tablet, $purchase-text_brand, );
-$sp_purchase_sprites_name: (purchase-book, purchase-calendar, purchase-car_map, purchase-catalog, purchase-coin_group, purchase-down_file, purchase-gold_coin, purchase-ico_card, purchase-ico_card_on, purchase-ico_dp, purchase-ico_dp_on, purchase-ico_file, purchase-ico_file_on, purchase-ico_handle, purchase-ico_handle_on, purchase-ico_info, purchase-ico_info_on, purchase-ico_light, purchase-ico_light_on, purchase-ico_random, purchase-ico_random_on, purchase-ico_round_graph, purchase-ico_round_graph_on, purchase-img_keyling, purchase-label_artworks, purchase-tablet, purchase-text_brand, );
-$sp_purchase: (451px, 308px, '../img/sp_purchase.png', $sp_purchase-sprites, );
+$sp_purchase-sprites: ($purchase-book, $purchase-calendar, $purchase-car_map, $purchase-catalog, $purchase-coin_group, $purchase-down_file, $purchase-gold_coin, $purchase-ico_card, $purchase-ico_card_on, $purchase-ico_down, $purchase-ico_dp, $purchase-ico_dp_on, $purchase-ico_file, $purchase-ico_file_on, $purchase-ico_handle, $purchase-ico_handle_on, $purchase-ico_info, $purchase-ico_info_on, $purchase-ico_light, $purchase-ico_light_on, $purchase-ico_random, $purchase-ico_random_on, $purchase-ico_round_graph, $purchase-ico_round_graph_on, $purchase-img_keyling, $purchase-label_artworks, $purchase-tablet, $purchase-text_brand, );
+$sp_purchase_sprites_name: (purchase-book, purchase-calendar, purchase-car_map, purchase-catalog, purchase-coin_group, purchase-down_file, purchase-gold_coin, purchase-ico_card, purchase-ico_card_on, purchase-ico_down, purchase-ico_dp, purchase-ico_dp_on, purchase-ico_file, purchase-ico_file_on, purchase-ico_handle, purchase-ico_handle_on, purchase-ico_info, purchase-ico_info_on, purchase-ico_light, purchase-ico_light_on, purchase-ico_random, purchase-ico_random_on, purchase-ico_round_graph, purchase-ico_round_graph_on, purchase-img_keyling, purchase-label_artworks, purchase-tablet, purchase-text_brand, );
+$sp_purchase: (400px, 342px, '../img/sp_purchase.png', $sp_purchase-sprites, );
 
 //mixin
 @mixin sp_purchase_img {

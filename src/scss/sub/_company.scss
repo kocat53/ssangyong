@@ -210,23 +210,23 @@
 }
 
 // 슬라이드용 화살표
-.btn_arrow {
-	position: absolute;
-	top: 50%;
+// .btn_arrow {
+// 	position: absolute;
+// 	top: 50%;
 
-	&.arrow_prev {
-		left: 0;
-		transform: rotateY(180deg);
-	}
+// 	&.arrow_prev {
+// 		left: 0;
+// 		transform: rotateY(180deg);
+// 	}
 
-	&.arrow_next {
-		right: 8px;
-	}
+// 	&.arrow_next {
+// 		right: 8px;
+// 	}
 
-	&:before {
-		@include sp_common($common-arw_right_9x17);
+// 	&:before {
+// 		@include sp_common($common-arw_right_9x17);
 
-		display: inline-block;
-		content: '';
-	}
-}
+// 		display: inline-block;
+// 		content: '';
+// 	}
+// }

@@ -4,7 +4,9 @@ mixin title(title,desc,tag)
    #{tag}.common_title!=title
    if desc
       p.desc_feature!=desc
-mixin bnMore()
+
+//- 공통 : 더보기
+mixin btnMore()
    a(href="#;").baisc_more
       span 더보기
       i.xi-angle-right(aria-hidden='true')

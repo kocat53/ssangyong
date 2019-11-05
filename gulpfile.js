@@ -7,6 +7,8 @@ var gulp = require('gulp'),
 	spritesmith = require('gulp.spritesmith'),
 	buffer = require('vinyl-buffer'),
 	decomment = require('gulp-decomment'),
+	changed = require('gulp-changed'),
+	plumberNotifier = require("gulp-plumber-notifier"),
 	del = require('del'), // 삭제 용도
 	plumber = require('gulp-plumber'), // 오류나는 부분 알려줌
 	prettier = require('gulp-prettier'),
@@ -29,27 +31,15 @@ var getFolders = function(dir) {
 	});
 };
 
-function broserLive(done) {
-	browsersync.init({
-		server: {
-			baseDir: "./dist"
-		},
-	});
-	done();
-}
-
-function browserSyncReload(done) {
-	browsersync.reload();
-	done();
-}
-
 // pug 를 html로 변환
 function com_pug(done) {
 	gulp.src('./src/**/*.pug')
-		.pipe(plumber())
-		.pipe(pug({
-			filename: 'include',
+		.pipe(changed('dist', {
+			extension: '.html',
 		}))
+		.pipe(plumber())
+		.pipe(plumberNotifier())
+		.pipe(pug())
 		.pipe(prettier({
 			tabWidth: 4,
 			parser: "html",
@@ -58,6 +48,7 @@ function com_pug(done) {
 			htmlWhitespaceSensitivity: "ignore",
 		}))
 		.pipe(gulp.dest('./dist'))
+		.pipe(browsersync.reload({stream:true}));
 	done();
 }
 
@@ -100,7 +91,7 @@ function sprite(done) {
 
 		spriteData.img
 			.pipe(buffer())
-			.pipe(gulp.dest('dist/img'));
+			.pipe(gulp.dest('src/img'));
 		spriteData.css.pipe(gulp.dest(dir.source + dir.scss + dir.lib));
 	});
 	done();
@@ -125,7 +116,13 @@ function image(done) {
 }
 
 // Watch files
-function watchFiles() {
+function watchFiles(done) {
+	browsersync.init({
+		server: {
+			baseDir: "./dist"
+		},
+	});
+
 	gulp.watch("src/scss/**/*", scss);
 	gulp.watch('src/**/*.pug', com_pug);
 	gulp.watch("src/js/*.js", js);
@@ -137,13 +134,10 @@ function watchFiles() {
 			"dist/css/*.css",
 			"dist/js/*.js",
 			"dist/*.html",
-		],
-		browserSyncReload,
-	)
+		]).on('change', browsersync.reload);
+	done();
 }
 
-// task 변수 지정
-const watch = gulp.parallel(watchFiles, broserLive);
 //const html = gulp.series(com_pug, delFolder);
 
 // task 용어 지정
@@ -151,4 +145,4 @@ exports.html = com_pug;
 exports.sprite = sprite;
 exports.img = image;
 exports.sass = scss;
-exports.bs = watch;
+exports.bs = watchFiles;
