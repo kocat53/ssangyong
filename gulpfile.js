@@ -68,7 +68,7 @@ function delFolder(done) {
 
 // sass - css 컴파일
 function scss(done) {
-	gulp.src('src/scss/**/*.scss' , {sourcemaps: true})
+	gulp.src('src/scss/**/*.scss')
 		.pipe(sass({
 			outputStyle: 'expanded', // nested, expanded, compact, compressed
 			indentType: 'tab',
@@ -77,7 +77,7 @@ function scss(done) {
 		.pipe(autoprefixer({
 			cascade: false
 		}))
-		.pipe(gulp.dest('dist/css',{ sourcemaps: './' }));
+		.pipe(gulp.dest('dist/css'));
 	done();
 }
 
